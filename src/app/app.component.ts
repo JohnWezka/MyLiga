@@ -9,11 +9,8 @@ import { LoginPage } from '../pages/login/login';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
   rootPage:any = RegistroTorneoPage;
-=======
-  rootPage:any = LoginPage;
->>>>>>> aad9ad61445403b96e8e861426d88c20bb13e433
+  
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

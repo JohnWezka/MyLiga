@@ -1,1 +1,23 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+        <ion-menu [content]="mycontent" >
+          <ion-content class="back">
+              <ion-list no-lines>
+                  <ion-item>
+                      <button ion-item>
+                          <ion-icon  item-left name="people"></ion-icon>
+                          Registro de torneo
+                        </button>
+                  </ion-item>
+                  <ion-item>
+                      <button ion-item>
+                          <ion-icon  item-left name="logo-apple"></ion-icon>
+                          Registro de arbitros
+                        </button>
+                  </ion-item>
+                </ion-list>
+          </ion-content>
+        </ion-menu>
+
+        <ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+
