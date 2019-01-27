@@ -6,13 +6,21 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+<<<<<<< HEAD
 import { RegistroTorneoPage } from '../pages/registro-torneo/registro-torneo';
+=======
+import { LoginPage } from '../pages/login/login';
+>>>>>>> aad9ad61445403b96e8e861426d88c20bb13e433
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+<<<<<<< HEAD
     RegistroTorneoPage
+=======
+    LoginPage
+>>>>>>> aad9ad61445403b96e8e861426d88c20bb13e433
   ],
   imports: [
     BrowserModule,
@@ -22,7 +30,11 @@ import { RegistroTorneoPage } from '../pages/registro-torneo/registro-torneo';
   entryComponents: [
     MyApp,
     HomePage,
+<<<<<<< HEAD
     RegistroTorneoPage
+=======
+    LoginPage
+>>>>>>> aad9ad61445403b96e8e861426d88c20bb13e433
   ],
   providers: [
     StatusBar,
