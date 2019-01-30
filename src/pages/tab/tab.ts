@@ -19,6 +19,7 @@ export class TabPage {
   tab1 = HomePage;
   tab2 = EquiposPage;
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
