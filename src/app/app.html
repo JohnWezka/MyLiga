@@ -1,1 +1,41 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+        <ion-menu [content]="mycontent" >
+          <ion-content class="back">
+              <ion-list no-lines>
+                  <ion-item>
+                      <button ion-item>
+                          <ion-icon  item-left name="ios-home"></ion-icon>
+                          Home
+                        </button>
+                  </ion-item>
+                  <ion-item>
+                      <button ion-item>
+                          <ion-icon  item-left name="ios-contact"></ion-icon>
+                          Arbitros
+                        </button>
+                  </ion-item>
+                  <ion-item>
+                        <button ion-item>
+                            <ion-icon  item-left name="ios-body"></ion-icon>
+                            Jugadores
+                          </button>
+                    </ion-item>
+                    <ion-item>
+                            <button ion-item>
+                                <ion-icon  item-left name="logo-dribbble"></ion-icon>
+                                Torneos
+                              </button>
+                        </ion-item><ion-item>
+                                <button ion-item>
+                                    <ion-icon  item-left name="logo-apple"></ion-icon>
+                                    
+                                  </button>
+                            </ion-item>
+
+                </ion-list>
+          </ion-content>
+        </ion-menu>
+
+        <ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+

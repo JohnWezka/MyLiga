@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import {RegistroTorneoPage} from '../pages/registro-torneo/registro-torneo';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
@@ -11,7 +11,12 @@ import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador'
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage:any = RegistroJugadorPage;
+=======
+  rootPage:any = RegistroTorneoPage;
+  
+>>>>>>> cd93ce5716f390a7a4e871d6ec7af7c04ed0f3ca
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
