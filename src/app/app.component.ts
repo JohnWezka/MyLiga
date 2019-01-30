@@ -6,13 +6,14 @@ import {RegistroTorneoPage} from '../pages/registro-torneo/registro-torneo';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
+import { TabPage } from '../pages/tab/tab';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage:any = HomePage;
+  rootPage:any = TabPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

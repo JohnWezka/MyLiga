@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { RegistroTorneoPage } from '../pages/registro-torneo/registro-torneo';
 import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
+import { TabPage } from '../pages/tab/tab';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador'
     HomePage,
     LoginPage,
     RegistroJugadorPage,
-    RegistroTorneoPage
+    RegistroTorneoPage,
+    TabPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador'
     HomePage,
     LoginPage,
     RegistroJugadorPage,
-    RegistroTorneoPage
+    RegistroTorneoPage,
+    TabPage
 
   ],
   providers: [

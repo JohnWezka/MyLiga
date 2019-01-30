@@ -15,11 +15,9 @@ import { EquiposPage } from '../equipos/equipos';
   templateUrl: 'tab.html',
 })
 export class TabPage {
-  constructor() {
-  this.tab1=HomePage;
-  this.tab2=EquiposPage;
-  }
-}
+
+  tab1 = HomePage;
+  tab2 = EquiposPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
