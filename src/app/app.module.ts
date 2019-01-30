@@ -14,13 +14,9 @@ import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador'
   declarations: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
     LoginPage,
-    RegistroJugadorPage
-=======
-    RegistroTorneoPage,
-    LoginPage
->>>>>>> cd93ce5716f390a7a4e871d6ec7af7c04ed0f3ca
+    RegistroJugadorPage,
+    RegistroTorneoPage
   ],
   imports: [
     BrowserModule,
@@ -30,14 +26,10 @@ import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador'
   entryComponents: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
     LoginPage,
-    RegistroJugadorPage
-=======
-    RegistroTorneoPage,
-    LoginPage
+    RegistroJugadorPage,
+    RegistroTorneoPage
 
->>>>>>> cd93ce5716f390a7a4e871d6ec7af7c04ed0f3ca
   ],
   providers: [
     StatusBar,
