@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
 import { TabPage } from '../pages/tab/tab';
+import { JugadoresPage } from '../pages/jugadores/jugadores';
 
 @Component({
   templateUrl: 'app.html'
