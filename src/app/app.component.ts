@@ -14,7 +14,7 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
 })
 export class MyApp {
 
-  rootPage:any = RegistroJugadorPage;
+  rootPage:any = TabPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
