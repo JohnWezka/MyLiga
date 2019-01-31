@@ -6,15 +6,14 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>RegistroJugador</ion-title>
+  <ion-navbar color = "primary">
+    <ion-title>Registro de Jugador</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  
+<ion-content padding class="body">
 
   <ion-list>
 
@@ -34,7 +33,7 @@
     </ion-item>
   
     <ion-item>
-      <ion-label floating>Fecha De Nacimiento:</ion-label>
+      <ion-label stacked>Fecha De Nacimiento:</ion-label>
       <ion-input type="Date"></ion-input>
     </ion-item>
 
@@ -64,10 +63,20 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Foto De Jugador:</ion-label>
+      <ion-label stacked>Foto De Jugador:</ion-label>
       <ion-input type="file"></ion-input>
     </ion-item>
 
   </ion-list>
+
+  
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4></ion-col>
+      <ion-col col-4><button ion-button color="secondary" round center>Agregar</button></ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
