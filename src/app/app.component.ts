@@ -13,7 +13,7 @@ import { TabPage } from '../pages/tab/tab';
 })
 export class MyApp {
 
-  rootPage:any = TabPage;
+  rootPage:any = RegistroJugadorPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
