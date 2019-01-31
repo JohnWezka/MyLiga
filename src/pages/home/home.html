@@ -1,14 +1,44 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color = "primary">
     <ion-title>
-      My Liga    
+        
+       <h1 class="titulo">Registro de Arbitros</h1>
+          
     </ion-title>
+    <ion-list>
+
+     
+    
+    </ion-list>
   </ion-navbar>    
 </ion-header>
 
 <ion-content padding>
-    The world is your oyster.
-    <p>
-        If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-    </p>
+   
+  <ion-list>
+    
+
+    <ion-item>
+      <ion-label floating>Nombres</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Apellidos</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Edad</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Roll</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+      <ion-item>
+        <ion-label stacked>foto</ion-label>
+        <ion-input type="file"></ion-input>
+    </ion-item>
+    <button ion-button class="boton">Registrar</button>
+    
+  </ion-list>
 </ion-content>
