@@ -20,7 +20,7 @@ export class EquiposPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  toJugadores(){
+  public toJugadores(){
     this.navCtrl.push(JugadoresPage);
   }
 
