@@ -6,13 +6,77 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>RegistroJugador</ion-title>
+  <ion-navbar color = "primary">
+    <ion-title>Registro de Jugador</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="body">
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nombre(s):</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Apellido Paterno:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Apellido Materno:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Fecha De Nacimiento:</ion-label>
+      <ion-input type="Date"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Numero:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Numero:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Peso:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Estatura:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Curp:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Foto De Jugador:</ion-label>
+      <ion-input type="file"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4></ion-col>
+      <ion-col col-4><button ion-button color="secondary" round center>Agregar</button></ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-
+import { EquiposPage } from '../equipos/equipos';
 /**
- * Generated class for the RegistroJugadorPage page.
+ * Generated class for the TabPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,16 +11,20 @@ import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-registro-jugador',
-  templateUrl: 'registro-jugador.html',
+  selector: 'page-tab',
+  templateUrl: 'tab.html',
 })
-export class RegistroJugadorPage {
+export class TabPage {
+
+  tab1 = HomePage;
+  tab2 = EquiposPage;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistroJugadorPage');
+    console.log('ionViewDidLoad TabPage');
   }
 
 }
