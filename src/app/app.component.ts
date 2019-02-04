@@ -14,7 +14,7 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
   templateUrl: 'app.html'
 })
 export class MyApp {
-
+//hola
   rootPage:any = RegistroJugadorPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
