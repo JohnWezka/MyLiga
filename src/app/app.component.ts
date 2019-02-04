@@ -14,7 +14,12 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage:any = RegistroJugadorPage;
+=======
+//hola
+  rootPage:any = TabPage;
+>>>>>>> c92f4a579ad3dfd0ed601a366e36c44d8718705c
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
