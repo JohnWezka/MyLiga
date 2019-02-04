@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
 
 /**
  * Generated class for the RegistroJugadorPage page.
@@ -17,6 +16,7 @@ import { HomePage } from '../home/home';
 export class RegistroJugadorPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
   ionViewDidLoad() {
