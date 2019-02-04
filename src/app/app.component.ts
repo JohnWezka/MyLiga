@@ -8,13 +8,14 @@ import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
 import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage:any = RegistroTorneoPage;
+  rootPage:any = ConfiguracionPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

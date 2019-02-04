@@ -11,7 +11,7 @@ import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador'
 import { TabPage } from '../pages/tab/tab';
 import { EquiposPage } from '../pages/equipos/equipos';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
-
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
     RegistroTorneoPage,
     TabPage,
     EquiposPage,
-    JugadoresPage
+    JugadoresPage,
+    ConfiguracionPage
   ],
   imports: [
     BrowserModule,
@@ -37,8 +38,8 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
     RegistroTorneoPage,
     TabPage,
     EquiposPage,
-    JugadoresPage
-
+    JugadoresPage,
+    ConfiguracionPage
   ],
   providers: [
     StatusBar,
