@@ -8,7 +8,8 @@ import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
 import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
-
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
+import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 @Component({
   templateUrl: 'app.html'
 })
