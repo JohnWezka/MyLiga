@@ -14,11 +14,7 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
 })
 export class MyApp {
 
-<<<<<<< HEAD
   rootPage:any = LoginPage;
-=======
-  rootPage:any = RegistroTorneoPage;
->>>>>>> 1c87181e86ed62a7aa5719f3fd0fd14dc22fb5cb
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
