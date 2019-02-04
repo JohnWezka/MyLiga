@@ -10,12 +10,13 @@ import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
+import { AdministradorPage} from '../pages/administrador/administrador';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 //hola
-  rootPage:any = RegistroJugadorPage;
+  rootPage:any = AdministradorPage ;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -26,4 +27,3 @@ export class MyApp {
     });
   }
 }
-
