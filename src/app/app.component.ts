@@ -15,8 +15,14 @@ import { AdministradorPage} from '../pages/administrador/administrador';
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
 //hola
   rootPage:any = AdministradorPage ;
+=======
+
+  rootPage:any = HomePage;
+
+>>>>>>> b3b665bc3b83eb85155f54f1f8bd1df9f5d1807c
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
