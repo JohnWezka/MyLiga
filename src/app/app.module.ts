@@ -11,7 +11,12 @@ import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador'
 import { TabPage } from '../pages/tab/tab';
 import { EquiposPage } from '../pages/equipos/equipos';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
+<<<<<<< HEAD
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
+=======
+import { RegistrarsePage } from '../pages/registrarse/registrarse';
 
+>>>>>>> 58363cb5208d9c59e856ded7162c03b1cdb4389f
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
     RegistroTorneoPage,
     TabPage,
     EquiposPage,
-    JugadoresPage
+    JugadoresPage,
+<<<<<<< HEAD
+    ConfiguracionPage
+=======
+    RegistrarsePage
+>>>>>>> 58363cb5208d9c59e856ded7162c03b1cdb4389f
   ],
   imports: [
     BrowserModule,
@@ -37,8 +47,13 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
     RegistroTorneoPage,
     TabPage,
     EquiposPage,
-    JugadoresPage
+    JugadoresPage,
+<<<<<<< HEAD
+    ConfiguracionPage
+=======
+    RegistrarsePage
 
+>>>>>>> 58363cb5208d9c59e856ded7162c03b1cdb4389f
   ],
   providers: [
     StatusBar,

@@ -20,6 +20,10 @@ export class EquiposPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  public toJugadores(){
+    this.navCtrl.push(JugadoresPage);
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad EquiposPage');
   }
