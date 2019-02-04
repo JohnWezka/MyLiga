@@ -6,16 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
-    <ion-title>Registro de Jugador</ion-title>
+  <ion-navbar color = "cielo">
+    
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="body">
+    <ion-title>Registro de Jugador</ion-title>
 
-  <ion-list>
+  <ion-list >
 
     <ion-item>
       <ion-label floating>Nombre(s):</ion-label>
@@ -43,11 +44,6 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Numero:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-
-    <ion-item>
       <ion-label floating>Peso:</ion-label>
       <ion-input type="text"></ion-input>
     </ion-item>
@@ -63,14 +59,11 @@
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Foto:</ion-label>
-      <ion-input type = "file">
+      <ion-label>Foto:</ion-label>
         <button ion-button outline item-end icon-start>
           <ion-icon name="image"></ion-icon>
           Foto
         </button>
-        hola
-      </ion-input>
     </ion-item>
 
   </ion-list>
@@ -78,7 +71,7 @@
   <ion-grid>
     <ion-row>
       <ion-col col-4></ion-col>
-      <ion-col col-4><button ion-button color="secondary" round center>Agregar</button></ion-col>
+      <ion-col col-4><button ion-button class = "colorBoton" round center>Agregar</button></ion-col>
       <ion-col col-4></ion-col>
     </ion-row>
   </ion-grid>
