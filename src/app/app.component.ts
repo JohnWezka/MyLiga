@@ -15,7 +15,7 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
 })
 export class MyApp {
 //hola
-  rootPage:any = RegistroJugadorPage;
+  rootPage:any = TabPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
