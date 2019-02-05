@@ -1,5 +1,5 @@
 <!--
-  Generated template for the RegistroJugadorPage page.
+  Generated template for the RegistrarEquiposPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,29 +7,18 @@
 <ion-header>
 
   <ion-navbar color = "capota">
-    <ion-title>Registro de Jugador</ion-title>
+    <ion-title>Registrar Equipo</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding class="body">
-    
+<ion-content padding>
 
-  <ion-list >
-
-    <ion-item>
-      <ion-label floating>Nombre(s):</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+  <ion-list>
 
     <ion-item>
-      <ion-label floating>Apellido Paterno:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label floating>Apellido Materno:</ion-label>
+      <ion-label floating>Nombre:</ion-label>
       <ion-input type="text"></ion-input>
     </ion-item>
 
@@ -60,17 +49,17 @@
 
     <ion-item>
       <ion-label>Foto:</ion-label>
-        <button color="carmesi" ion-button outline item-end icon-start>
-          <ion-icon name="image"></ion-icon>
-          Foto
-        </button>
+      <button color="carmesi" ion-button outline item-end icon-start>
+        <ion-icon name="image"></ion-icon>
+        Foto
+      </button>
     </ion-item>
 
     <ion-item>
-      <ion-label>Equipo:</ion-label>
-      <ion-select [(ngModel)] = "Equipo">
-        <ion-option value="Equipo 1">Equipo 1</ion-option>
-        <ion-option value="Equipo 2">Equipo 2</ion-option>
+      <ion-label>Categoria:</ion-label>
+      <ion-select [(ngModel)]="Equipo">
+        <ion-option value="Categoria 1">Categoria 1</ion-option>
+        <ion-option value="Categoria 2">Categoria 2</ion-option>
       </ion-select>
     </ion-item>
 
