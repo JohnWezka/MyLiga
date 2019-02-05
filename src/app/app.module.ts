@@ -14,6 +14,7 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistrarsePage } from '../pages/registrarse/registrarse';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
+import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +27,8 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
     JugadoresPage,
     ConfiguracionPage,
     RegistrarsePage,
-    RegistroArbitrosPage
+    RegistroArbitrosPage,
+    EquipoPrincipalPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
     JugadoresPage,
     ConfiguracionPage,
     RegistrarsePage,
-    RegistroArbitrosPage
+    RegistroArbitrosPage,
+    EquipoPrincipalPage
 
   ],
   providers: [

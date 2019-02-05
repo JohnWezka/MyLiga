@@ -8,15 +8,14 @@ import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
 import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
-import { ConfiguracionPage } from '../pages/configuracion/configuracion';
-import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
+import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage:any = HomePage;
-
+  rootPage:any = EquipoPrincipalPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
