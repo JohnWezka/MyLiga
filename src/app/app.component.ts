@@ -8,16 +8,39 @@ import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
 import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
+<<<<<<< HEAD
+import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
+
+=======
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
+<<<<<<< HEAD
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 
+=======
+import { AdministradorPage} from '../pages/administrador/administrador';
+>>>>>>> 968b1f2768722cf04312ae4273ef24596464d80e
+>>>>>>> 8750fcf78f06b95ee381402fd24288c7034b514a
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
 //hola
+<<<<<<< HEAD
   rootPage:any = RegistroLigaPage;
+=======
+  rootPage:any = AdministradorPage ;
+=======
+
+<<<<<<< HEAD
+  rootPage:any = EquipoPrincipalPage;
+=======
+  rootPage:any = HomePage;
+
+>>>>>>> b3b665bc3b83eb85155f54f1f8bd1df9f5d1807c
+>>>>>>> 968b1f2768722cf04312ae4273ef24596464d80e
+>>>>>>> 8750fcf78f06b95ee381402fd24288c7034b514a
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -28,4 +51,3 @@ export class MyApp {
     });
   }
 }
-
