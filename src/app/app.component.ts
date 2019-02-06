@@ -13,13 +13,12 @@ import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage:any = HomePage;
+  rootPage:any = TabPage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
