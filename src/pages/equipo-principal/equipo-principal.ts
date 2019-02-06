@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { JugadoresPage } from '../jugadores/jugadores';
 
 /**
  * Generated class for the EquipoPrincipalPage page.
@@ -16,6 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class EquipoPrincipalPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  public toJugadores(){
+    this.navCtrl.push(JugadoresPage);
   }
 
   ionViewDidLoad() {
