@@ -8,14 +8,18 @@ import { LoginPage } from '../pages/login/login';
 import { RegistroJugadorPage } from '../pages/registro-jugador/registro-jugador';
 import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
+import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
+import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
+import { AdministradorPage} from '../pages/administrador/administrador';
+import { MarcadorPage } from '../pages/marcador/marcador';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-//hola
-  rootPage:any = RegistroArbitrosPage;
+
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -26,4 +30,3 @@ export class MyApp {
     });
   }
 }
-
