@@ -14,15 +14,9 @@ import { JugadoresPage } from '../pages/jugadores/jugadores';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistrarsePage } from '../pages/registrarse/registrarse';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
-<<<<<<< HEAD
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
-=======
-<<<<<<< HEAD
 import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
-=======
 import { AdministradorPage } from '../pages/administrador/administrador';
->>>>>>> 968b1f2768722cf04312ae4273ef24596464d80e
->>>>>>> 8750fcf78f06b95ee381402fd24288c7034b514a
 @NgModule({
   declarations: [
     MyApp,
@@ -36,15 +30,9 @@ import { AdministradorPage } from '../pages/administrador/administrador';
     ConfiguracionPage,
     RegistrarsePage,
     RegistroArbitrosPage,
-<<<<<<< HEAD
-    RegistroLigaPage
-=======
-<<<<<<< HEAD
-    EquipoPrincipalPage
-=======
+    RegistroLigaPage,
+    EquipoPrincipalPage,
     AdministradorPage
->>>>>>> 968b1f2768722cf04312ae4273ef24596464d80e
->>>>>>> 8750fcf78f06b95ee381402fd24288c7034b514a
   ],
   imports: [
     BrowserModule,
@@ -63,15 +51,9 @@ import { AdministradorPage } from '../pages/administrador/administrador';
     ConfiguracionPage,
     RegistrarsePage,
     RegistroArbitrosPage,
-<<<<<<< HEAD
-    RegistroLigaPage
-=======
-<<<<<<< HEAD
-    EquipoPrincipalPage
-=======
+    RegistroLigaPage,
+    EquipoPrincipalPage,
     AdministradorPage
->>>>>>> 968b1f2768722cf04312ae4273ef24596464d80e
->>>>>>> 8750fcf78f06b95ee381402fd24288c7034b514a
 
   ],
   providers: [
