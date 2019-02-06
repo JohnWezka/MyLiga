@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RegistroLigaPage } from '../registro-liga/registro-liga';
+import { AdministradorPage } from '../administrador/administrador';
 
 /**
- * Generated class for the RegistrarsePage page.
+ * Generated class for the RegistroLigaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +11,20 @@ import { RegistroLigaPage } from '../registro-liga/registro-liga';
 
 @IonicPage()
 @Component({
-  selector: 'page-registrarse',
-  templateUrl: 'registrarse.html',
+  selector: 'page-registro-liga',
+  templateUrl: 'registro-liga.html',
 })
-export class RegistrarsePage {
+export class RegistroLigaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistrarsePage');
+    console.log('ionViewDidLoad RegistroLigaPage');
   }
 
-  public irRegistroLiga(){
-    this.navCtrl.setRoot(RegistroLigaPage);
+  public irHomeAdmin(){
+    this.navCtrl.setRoot(AdministradorPage);
   }
 
 }

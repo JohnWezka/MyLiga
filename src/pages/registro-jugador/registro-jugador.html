@@ -7,77 +7,85 @@
 <ion-header>
 
 
-  <ion-navbar color = "capota">
-      <button class="buttom-menu" ion-button menuToggle>
+    <ion-navbar color="capota">
+        <button class="buttom-menu" ion-button menuToggle>
           <ion-icon item-left name="menu" menuToggle></ion-icon>
         </button>
-    <ion-title>Registro de Jugador</ion-title>
+        <ion-title>Registro de Jugador</ion-title>
 
-  </ion-navbar>
+    </ion-navbar>
 
 </ion-header>
 
 <ion-content padding class="body">
-    
 
-  <ion-list >
 
-    <ion-item>
-      <ion-label floating>Nombre(s):</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+    <ion-list>
 
-    <ion-item>
-      <ion-label floating>Apellido Paterno:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-label floating>Nombre(s):</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label floating>Apellido Materno:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-label floating>Apellido Paterno:</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Fecha De Nacimiento:</ion-label>
-      <ion-input type="Date"></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-label floating>Apellido Materno:</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label floating>Numero:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-label stacked>Fecha De Nacimiento:</ion-label>
+            <ion-input type="Date"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label floating>Peso:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-label floating>Numero:</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label floating>Estatura:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-label floating>Peso:</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label floating>Curp:</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-label floating>Estatura:</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
 
-    <ion-item>
-      <ion-label>Foto:</ion-label>
-        <button color="carmesi" ion-button outline item-end icon-start>
+        <ion-item>
+            <ion-label floating>Curp:</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Foto:</ion-label>
+            <button color="carmesi" ion-button outline item-end icon-start>
           <ion-icon name="image"></ion-icon>
           Foto
         </button>
+        </ion-item>
+
+    <ion-item>
+      <ion-label>Equipo:</ion-label>
+      <ion-select [(ngModel)] = "Equipo">
+        <ion-option value="Equipo 1">Equipo 1</ion-option>
+        <ion-option value="Equipo 2">Equipo 2</ion-option>
+      </ion-select>
     </ion-item>
 
   </ion-list>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-4></ion-col>
-      <ion-col col-4><button ion-button color="carmesi" round center>Agregar</button></ion-col>
-      <ion-col col-4></ion-col>
-    </ion-row>
-  </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4></ion-col>
+            <ion-col col-4><button ion-button color="carmesi" round center>Agregar</button></ion-col>
+            <ion-col col-4></ion-col>
+        </ion-row>
+    </ion-grid>
 
 </ion-content>
