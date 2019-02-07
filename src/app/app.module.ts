@@ -22,8 +22,12 @@ import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+<<<<<<< HEAD
 import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
 import { RegistroPartidosAdminPage } from '../pages/registro-partidos-admin/registro-partidos-admin';
+=======
+import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
+>>>>>>> f6701f198c2e7a1261ebc9d1d4d1968b663e6325
 @NgModule({
   declarations: [
     MyApp,
@@ -45,8 +49,12 @@ import { RegistroPartidosAdminPage } from '../pages/registro-partidos-admin/regi
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
+<<<<<<< HEAD
     RegistroPartidosPage,
     RegistroPartidosAdminPage
+=======
+    TablaDePuntosPage
+>>>>>>> f6701f198c2e7a1261ebc9d1d4d1968b663e6325
   ],
   imports: [
     BrowserModule,
@@ -73,8 +81,12 @@ import { RegistroPartidosAdminPage } from '../pages/registro-partidos-admin/regi
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
+<<<<<<< HEAD
     RegistroPartidosPage,
     RegistroPartidosAdminPage
+=======
+    TablaDePuntosPage
+>>>>>>> f6701f198c2e7a1261ebc9d1d4d1968b663e6325
 
   ],
   providers: [

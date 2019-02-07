@@ -17,20 +17,33 @@ import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+<<<<<<< HEAD
 import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
 import { RegistroPartidosAdminPage } from '../pages/registro-partidos-admin/registro-partidos-admin';
 
+=======
+import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
+>>>>>>> f6701f198c2e7a1261ebc9d1d4d1968b663e6325
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
+<<<<<<< HEAD
 @ViewChild(Nav) nav: Nav;
 
+=======
+<<<<<<< HEAD
+  rootPage:any = AdministradorPage ;
+=======
+
+  rootPage:any = TablaDePuntosPage;
+>>>>>>> f6701f198c2e7a1261ebc9d1d4d1968b663e6325
 
   rootPage:any = RegistroPartidosPage;
   pages: Array<{title: String, Component: any}>;
 
+>>>>>>> e8d44f7a61f065cf2df9e3acd76e61d0b7333b85
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
