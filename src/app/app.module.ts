@@ -17,13 +17,19 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
 import { AdministradorPage } from '../pages/administrador/administrador';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
+import { MarcadorPage } from '../pages/marcador/marcador';
 import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+<<<<<<< HEAD
 import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
 
+=======
+import { RegistroMarcadorPage }from '../pages/registro-marcador/registro-marcador';
+import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
+>>>>>>> 2969ebde0459274cc28c787bb9bb19d2c20a1966
 @NgModule({
   declarations: [
     MyApp,
@@ -40,12 +46,18 @@ import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partid
     RegistroLigaPage,
     EquipoPrincipalPage,
     AdministradorPage,
+    MarcadorPage,
     TabsAdminPage,
     EquiposAdminPage,
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
+<<<<<<< HEAD
     RegistroPartidosPage
+=======
+    RegistroMarcadorPage,
+    TablaDePuntosPage
+>>>>>>> 2969ebde0459274cc28c787bb9bb19d2c20a1966
   ],
   imports: [
     BrowserModule,
@@ -67,12 +79,18 @@ import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partid
     RegistroLigaPage,
     EquipoPrincipalPage,
     AdministradorPage,
+    MarcadorPage,
     TabsAdminPage,
     EquiposAdminPage,
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
+<<<<<<< HEAD
     RegistroPartidosPage
+=======
+    RegistroMarcadorPage,
+    TablaDePuntosPage
+>>>>>>> 2969ebde0459274cc28c787bb9bb19d2c20a1966
 
   ],
   providers: [
