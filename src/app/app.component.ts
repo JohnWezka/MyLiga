@@ -14,6 +14,7 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
+import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 @Component({
   templateUrl: 'app.html'
 })

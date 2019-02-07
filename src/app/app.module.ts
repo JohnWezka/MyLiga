@@ -20,6 +20,7 @@ import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal'
 import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
+import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 @NgModule({
   declarations: [
     MyApp,
@@ -38,7 +39,8 @@ import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuari
     AdministradorPage,
     TabsAdminPage,
     EquiposAdminPage,
-    RegistroUsuariosPage
+    RegistroUsuariosPage,
+    ElegirLigaPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuari
     AdministradorPage,
     TabsAdminPage,
     EquiposAdminPage,
-    RegistroUsuariosPage
+    RegistroUsuariosPage,
+    ElegirLigaPage
 
   ],
   providers: [
