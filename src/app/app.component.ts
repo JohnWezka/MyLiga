@@ -16,11 +16,19 @@ import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage:any = AdministradorPage ;
+=======
+
+  rootPage:any = TablaDePuntosPage;
+
+
+>>>>>>> e8d44f7a61f065cf2df9e3acd76e61d0b7333b85
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
