@@ -28,10 +28,14 @@ export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   rootPage:any = RegistroJugadorPage;
   pages: Array<{title: String, Component: any}>;
 =======
   rootPage:any = TabPage;
+=======
+  rootPage:any = RegistroUsuariosPage;
+>>>>>>> 9718a61e69f52523d929be54e3ba78d354d8687e
 
 >>>>>>> 66c6d63f4f9d2ef7b60585d4fa6022a9c03af0f0
 
