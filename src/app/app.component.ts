@@ -15,12 +15,14 @@ import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
+import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage:any = RegistroUsuariosPage;
+  rootPage:any = LoginPage;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
