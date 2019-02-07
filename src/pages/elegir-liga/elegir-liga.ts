@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { EquiposPage } from '../equipos/equipos';
-import { ConfiguracionPage } from '../configuracion/configuracion';
+
 /**
- * Generated class for the TabPage page.
+ * Generated class for the ElegirLigaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,21 +11,20 @@ import { ConfiguracionPage } from '../configuracion/configuracion';
 
 @IonicPage()
 @Component({
-  selector: 'page-tab',
-  templateUrl: 'tab.html',
+  selector: 'page-elegir-liga',
+  templateUrl: 'elegir-liga.html',
 })
-export class TabPage {
-
-  tab1 = HomePage;
-  tab2 = EquiposPage;
-  tab3 = ConfiguracionPage;
-
+export class ElegirLigaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TabPage');
+    console.log('ionViewDidLoad ElegirLigaPage');
+  }
+
+  public irHome() {
+    this.navCtrl.setRoot(HomePage);
   }
 
 }
