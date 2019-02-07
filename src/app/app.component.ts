@@ -15,17 +15,14 @@ import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
+import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-<<<<<<< HEAD
   rootPage:any = TabPage;
 
-=======
-  rootPage:any = RegistroUsuariosPage;
->>>>>>> fc2cadb593639f5e90f127376651c941a06d9aa3
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

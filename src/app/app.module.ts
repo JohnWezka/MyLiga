@@ -21,6 +21,7 @@ import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
+import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 @NgModule({
   declarations: [
     MyApp,
@@ -40,7 +41,8 @@ import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
     TabsAdminPage,
     EquiposAdminPage,
     RegistroUsuariosPage,
-    ElegirLigaPage
+    ElegirLigaPage,
+    JugadorInfoPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
     TabsAdminPage,
     EquiposAdminPage,
     RegistroUsuariosPage,
-    ElegirLigaPage
+    ElegirLigaPage,
+    JugadorInfoPage
 
   ],
   providers: [
