@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RegistrarsePage } from '../registrarse/registrarse';
 import { AdministradorPage } from '../administrador/administrador';
-import { TabsAdminPage } from '../tabs-admin/tabs-admin';
 
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the TabsAdminPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,24 +11,18 @@ import { TabsAdminPage } from '../tabs-admin/tabs-admin';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-tabs-admin',
+  templateUrl: 'tabs-admin.html',
 })
-export class LoginPage {
+export class TabsAdminPage {
+
+  tab1 = AdministradorPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-  
-  irRegistro(){
-    this.navCtrl.push(RegistrarsePage);
-  }
-
-  public irHomeAdmin(){
-    this.navCtrl.setRoot(TabsAdminPage);
+    console.log('ionViewDidLoad TabsAdminPage');
   }
 
 }
