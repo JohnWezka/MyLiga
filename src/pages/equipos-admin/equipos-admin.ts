@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TabsAdminPage } from '../tabs-admin/tabs-admin';
 
 /**
- * Generated class for the RegistroLigaPage page.
+ * Generated class for the EquiposAdminPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,16 @@ import { TabsAdminPage } from '../tabs-admin/tabs-admin';
 
 @IonicPage()
 @Component({
-  selector: 'page-registro-liga',
-  templateUrl: 'registro-liga.html',
+  selector: 'page-equipos-admin',
+  templateUrl: 'equipos-admin.html',
 })
-export class RegistroLigaPage {
+export class EquiposAdminPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistroLigaPage');
-  }
-
-  public irHomeAdmin(){
-    this.navCtrl.setRoot(TabsAdminPage);
+    console.log('ionViewDidLoad EquiposAdminPage');
   }
 
 }
