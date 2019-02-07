@@ -19,7 +19,7 @@ import { MarcadorPage } from '../pages/marcador/marcador';
 })
 export class MyApp {
 
-  rootPage:any = LoginPage;
+  rootPage:any = MarcadorPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
