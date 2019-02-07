@@ -18,6 +18,12 @@ import { AdministradorPage } from '../pages/administrador/administrador';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
 import { MarcadorPage } from '../pages/marcador/marcador';
+import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
+import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
+import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
+import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
+import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+import { RegistroMarcadorPage }from '../pages/registro-marcador/registro-marcador';
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +40,13 @@ import { MarcadorPage } from '../pages/marcador/marcador';
     RegistroLigaPage,
     EquipoPrincipalPage,
     AdministradorPage,
-    MarcadorPage
+    MarcadorPage,
+    TabsAdminPage,
+    EquiposAdminPage,
+    RegistroUsuariosPage,
+    ElegirLigaPage,
+    JugadorInfoPage,
+    RegistroMarcadorPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +68,13 @@ import { MarcadorPage } from '../pages/marcador/marcador';
     RegistroLigaPage,
     EquipoPrincipalPage,
     AdministradorPage,
-    MarcadorPage
+    MarcadorPage,
+    TabsAdminPage,
+    EquiposAdminPage,
+    RegistroUsuariosPage,
+    ElegirLigaPage,
+    JugadorInfoPage,
+    RegistroMarcadorPage
 
   ],
   providers: [

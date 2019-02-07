@@ -14,12 +14,17 @@ import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitr
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
 import { MarcadorPage } from '../pages/marcador/marcador';
+import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
+import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
+import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+import { RegistroMarcadorPage } from '../pages/registro-marcador/registro-marcador';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage:any = MarcadorPage;
+  rootPage:any = RegistroMarcadorPage;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

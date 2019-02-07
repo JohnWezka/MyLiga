@@ -18,7 +18,12 @@
   <ion-list>
 
     <ion-item>
-      <ion-label floating>Nombre:</ion-label>
+      <ion-label floating>Nombre de Liga:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nombre de Dueño:</ion-label>
       <ion-input type="text"></ion-input>
     </ion-item>
 
@@ -29,7 +34,7 @@
 
     <ion-item>
         <ion-label>Foto:</ion-label>
-          <button color="carmesi" ion-button outline item-end icon-start>
+          <button color="primary" ion-button outline item-end icon-start>
             <ion-icon name="image"></ion-icon>
             Foto
           </button>
@@ -40,7 +45,7 @@
   <ion-grid>
       <ion-row>
         <ion-col col-4></ion-col>
-        <ion-col col-4><button ion-button color="carmesi" round center (click) = "irHomeAdmin()">Crear</button></ion-col>
+        <ion-col col-4><button ion-button color="primary" outline round center (click) = "irHomeAdmin()">Crear</button></ion-col>
         <ion-col col-4></ion-col>
       </ion-row>
     </ion-grid>
