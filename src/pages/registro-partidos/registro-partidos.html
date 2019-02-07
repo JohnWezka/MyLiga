@@ -11,9 +11,10 @@
 
     <ion-grid>
         <ion-row>
-            <ion-col col-2>ksdk</ion-col>
-            <ion-col col-8><img src="../../assets/imgs/"></ion-col>
-            <ion-col col-2>dsd</ion-col>
+            
+            <ion-col col-5><img src="../../assets/imgs/nets.jpg"></ion-col>
+            <ion-col col-2 style="font-size: 35px;">VS</ion-col>
+            <ion-col col-5><img src="../../assets/imgs/toronto.jpg"></ion-col>
         </ion-row>
     </ion-grid>
   
@@ -51,19 +52,16 @@
         <ion-input type="Date"></ion-input>
     </ion-item>
 
-  <ion-item>
-    <ion-label>Tipo de partido</ion-label>
-    <ion-select [(ngModel)] = "partido">
-      <ion-option value="Ejemplo 1">Ejemplo 1</ion-option>
-      <ion-option value="Ejemplo 2">Ejemplo 2</ion-option>
-    </ion-select>
+    <ion-item>
+      <ion-label stacked>Hora del partido</ion-label>
+      <ion-input type="Time"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>Novedad</ion-label>
-    <ion-select [(ngModel)] = "novedad">
-      <ion-option value="Novedad 1">Novedad 1</ion-option>
-      <ion-option value="Novedad 2">Novedad 2</ion-option>
+    <ion-label>Categoria</ion-label>
+    <ion-select [(ngModel)] = "Categoria">
+      <ion-option value="Categoria 1">Categoria 1</ion-option>
+      <ion-option value="Categoria 2">Categoria 2</ion-option>
     </ion-select>
   </ion-item>
 

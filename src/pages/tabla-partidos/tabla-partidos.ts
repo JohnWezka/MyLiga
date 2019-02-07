@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the RegistroPartidosAdminPage page.
+ * Generated class for the TablaPartidosPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-registro-partidos-admin',
-  templateUrl: 'registro-partidos-admin.html',
+  selector: 'page-tabla-partidos',
+  templateUrl: 'tabla-partidos.html',
 })
-export class RegistroPartidosAdminPage {
+export class TablaPartidosPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistroPartidosAdminPage');
+    console.log('ionViewDidLoad TablaPartidosPage');
   }
 
 }
