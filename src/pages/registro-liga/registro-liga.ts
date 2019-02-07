@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AdministradorPage } from '../administrador/administrador';
+import { TabsAdminPage } from '../tabs-admin/tabs-admin';
 
 /**
  * Generated class for the RegistroLigaPage page.
@@ -24,7 +24,7 @@ export class RegistroLigaPage {
   }
 
   public irHomeAdmin(){
-    this.navCtrl.setRoot(AdministradorPage);
+    this.navCtrl.setRoot(TabsAdminPage);
   }
 
 }

@@ -13,7 +13,13 @@ import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
+<<<<<<< HEAD
 
+=======
+import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
+import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
+import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+>>>>>>> 66c6d63f4f9d2ef7b60585d4fa6022a9c03af0f0
 @Component({
   templateUrl: 'app.html'
 })
@@ -21,8 +27,13 @@ import { AdministradorPage} from '../pages/administrador/administrador';
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
+<<<<<<< HEAD
   rootPage:any = RegistroJugadorPage;
   pages: Array<{title: String, Component: any}>;
+=======
+  rootPage:any = TabPage;
+
+>>>>>>> 66c6d63f4f9d2ef7b60585d4fa6022a9c03af0f0
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
