@@ -16,12 +16,13 @@ import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage:any = RegistroUsuariosPage;
+  rootPage:any = TablaDePuntosPage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
