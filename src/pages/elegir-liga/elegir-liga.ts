@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { TabPage } from '../tab/tab';
 
 /**
  * Generated class for the ElegirLigaPage page.
@@ -24,7 +24,7 @@ export class ElegirLigaPage {
   }
 
   public irHome() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(TabPage);
   }
 
 }

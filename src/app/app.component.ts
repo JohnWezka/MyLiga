@@ -21,7 +21,7 @@ import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 })
 export class MyApp {
 
-  rootPage:any = LoginPage;
+  rootPage:any = RegistroUsuariosPage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
