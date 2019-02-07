@@ -22,6 +22,8 @@ import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
+import { RegistroPartidosAdminPage } from '../pages/registro-partidos-admin/registro-partidos-admin';
 @NgModule({
   declarations: [
     MyApp,
@@ -42,7 +44,9 @@ import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
     EquiposAdminPage,
     RegistroUsuariosPage,
     ElegirLigaPage,
-    JugadorInfoPage
+    JugadorInfoPage,
+    RegistroPartidosPage,
+    RegistroPartidosAdminPage
   ],
   imports: [
     BrowserModule,
@@ -68,7 +72,9 @@ import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
     EquiposAdminPage,
     RegistroUsuariosPage,
     ElegirLigaPage,
-    JugadorInfoPage
+    JugadorInfoPage,
+    RegistroPartidosPage,
+    RegistroPartidosAdminPage
 
   ],
   providers: [

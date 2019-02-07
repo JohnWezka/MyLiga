@@ -13,13 +13,13 @@ import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
-<<<<<<< HEAD
 
-=======
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
->>>>>>> 66c6d63f4f9d2ef7b60585d4fa6022a9c03af0f0
+import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
+import { RegistroPartidosAdminPage } from '../pages/registro-partidos-admin/registro-partidos-admin';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -27,17 +27,9 @@ import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  rootPage:any = RegistroJugadorPage;
-  pages: Array<{title: String, Component: any}>;
-=======
-  rootPage:any = TabPage;
-=======
-  rootPage:any = RegistroUsuariosPage;
->>>>>>> 9718a61e69f52523d929be54e3ba78d354d8687e
 
->>>>>>> 66c6d63f4f9d2ef7b60585d4fa6022a9c03af0f0
+  rootPage:any = RegistroPartidosPage;
+  pages: Array<{title: String, Component: any}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
