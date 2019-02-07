@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AdministradorPage } from '../administrador/administrador';
+import { EquiposAdminPage } from '../equipos-admin/equipos-admin';
 
 /**
  * Generated class for the TabsAdminPage page.
@@ -17,6 +18,7 @@ import { AdministradorPage } from '../administrador/administrador';
 export class TabsAdminPage {
 
   tab1 = AdministradorPage;
+  tab2 = EquiposAdminPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
