@@ -24,6 +24,7 @@ import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuari
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 import { RegistroMarcadorPage }from '../pages/registro-marcador/registro-marcador';
+import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 @NgModule({
   declarations: [
     MyApp,
@@ -46,7 +47,8 @@ import { RegistroMarcadorPage }from '../pages/registro-marcador/registro-marcado
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
-    RegistroMarcadorPage
+    RegistroMarcadorPage,
+    TablaDePuntosPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,8 @@ import { RegistroMarcadorPage }from '../pages/registro-marcador/registro-marcado
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
-    RegistroMarcadorPage
+    RegistroMarcadorPage,
+    TablaDePuntosPage
 
   ],
   providers: [

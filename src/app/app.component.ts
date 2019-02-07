@@ -18,14 +18,14 @@ import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuari
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 import { RegistroMarcadorPage } from '../pages/registro-marcador/registro-marcador';
+import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
   rootPage:any = RegistroMarcadorPage;
-
-
+  
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
