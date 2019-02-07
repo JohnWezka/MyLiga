@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
+import { ElegirLigaPage } from '../elegir-liga/elegir-liga';
 
 /**
  * Generated class for the RegistroUsuariosPage page.
@@ -20,6 +22,15 @@ export class RegistroUsuariosPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroUsuariosPage');
+  }
+
+  public irLogin(){
+    this.navCtrl.push(LoginPage);
+    console.log("login");
+  }
+
+  public elegirLiga(){
+    this.navCtrl.push(ElegirLigaPage);
   }
 
 }
