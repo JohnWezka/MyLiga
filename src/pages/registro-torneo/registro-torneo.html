@@ -1,56 +1,64 @@
-<ion-header class="ion-header">
-    <ion-navbar class="header">
+<ion-header  class="ion-header">
+    <ion-navbar color="capota" class="header">
         <ion-title>Registro de Torneos</ion-title>
-        <button class="buttom-menu" ion-button menuToggle>
-      <ion-icon item-left name="menu" menuToggle></ion-icon>
-    </button>
+        
     </ion-navbar>
 </ion-header>
 
-<ion-content class="ion-content">
-    <ion-list no-lines>
+
+<ion-content padding class="body">
+
+
+    <ion-list>
 
         <ion-item>
-            <ion-label floating>Nombre</ion-label>
+            <ion-label floating>Nombre:</ion-label>
             <ion-input type="text"></ion-input>
         </ion-item>
 
-        <ion-list>
-            <ion-item>
-                <ion-label floating>Tipo de Torneo</ion-label>
-                <ion-select [(ngModel)]="Tipo_de_torneo">
-                    <ion-option value="Relampago">Relampago</ion-option>
-                    <ion-option value="*********">Liga</ion-option>
-                    <ion-option value="*********">Grupos</ion-option>
-                    <ion-option value="*********">Eliminacion</ion-option>
-                </ion-select>
-            </ion-item>
-        </ion-list>
-
         <ion-item>
-            <ion-label floating></ion-label>
-            <ion-input type="date"></ion-input>
+            <ion-label>Tipo de torneo:</ion-label>
+            <ion-select [(ngModel)] = "partido">
+              <ion-option value=" Relampago">Relampago</ion-option>
+              <ion-option value="Torneo">Torneo</ion-option>
+            </ion-select>
+          </ion-item>
+
+        
+        <ion-item>
+            <ion-label stacked>Fecha de incio:</ion-label>
+            <ion-input type="Date"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label floating>Codigo</ion-label>
+            <ion-label stacked>Fecha de cierre:</ion-label>
+            <ion-input type="Date"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Codigo:</ion-label>
             <ion-input type="text"></ion-input>
         </ion-item>
 
-        <ion-list>
-            <ion-item>
-                <ion-label floating>Categoria</ion-label>
-                <ion-select [(ngModel)]="Categoria">
-                    <ion-option value="Pre-inicial"> Pre-inicial </ion-option>
-                    <ion-option value="Mini"> Mini </ion-option>
-                    <ion-option value="Secundarias"> Secundarias </ion-option>
-                    <ion-option value="Prepass"> Prepas </ion-option>
-                    <ion-option value="Libre"> Libre </ion-option>
-                </ion-select>
-            </ion-item>
-        </ion-list>
+        <ion-item>
+            <ion-label>Categoria:</ion-label>
+            <ion-select [(ngModel)] = "partido">
+              <ion-option value="Pre-mini">Pre-mini</ion-option>
+              <ion-option value="Primaria">Primaria</ion-option>
+              <ion-option value="Prepas">Prepas</ion-option>
+              <ion-option value="Libre">Libre</ion-option>
+            </ion-select>
+          </ion-item>
 
-    </ion-list>
+  </ion-list>
 
-    <button ion-button round block class="buttom">Registrarse</button>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4></ion-col>
+            <ion-col col-4><button ion-button outline item-end icon-start color="primary" round center>Agregar</button></ion-col>
+            <ion-col col-4></ion-col>
+        </ion-row>
+    </ion-grid>
+
 </ion-content>
