@@ -22,6 +22,7 @@ import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroMarcadorPage } from '../pages/registro-marcador/registro-marcador';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -33,6 +34,7 @@ export class MyApp {
   rootPage:any = TabPage;
   
   pages: Array<{title: String, Component: any}>;
+      // Here you can do any higher level native things you might need.
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
