@@ -17,8 +17,6 @@ import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
-<<<<<<< HEAD
-
 import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
 
 
@@ -27,38 +25,25 @@ import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
 
-=======
-<<<<<<< HEAD
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
-=======
+
 import { RegistroMarcadorPage } from '../pages/registro-marcador/registro-marcador';
-import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
->>>>>>> c76e3f5dff896b87097ca0ae636e553d7ad8b96d
->>>>>>> c47817f87f6a2f4d94515747d395d261a2947c46
+
+
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 @ViewChild(Nav) nav: Nav;
 
 
-  rootPage:any = TabaPartidosAdminPage;
+  rootPage:any = RegistroJugadorPage;
   
   pages: Array<{title: String, Component: any}>;
 
-
-=======
-  rootPage:any = EquiposAdminPage;
-
-
-=======
-  rootPage:any = AdministradorPage ;
->>>>>>> c76e3f5dff896b87097ca0ae636e553d7ad8b96d
->>>>>>> c47817f87f6a2f4d94515747d395d261a2947c46
+      // Here you can do any higher level native things you might need.
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
