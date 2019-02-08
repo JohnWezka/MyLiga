@@ -13,7 +13,6 @@ import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
-<<<<<<< HEAD
 
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
@@ -23,14 +22,9 @@ import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partid
 
 
 
-=======
-import { MarcadorPage } from '../pages/marcador/marcador';
-import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
-import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
-import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
-import { RegistroMarcadorPage } from '../pages/registro-marcador/registro-marcador';
->>>>>>> 2969ebde0459274cc28c787bb9bb19d2c20a1966
 import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
+import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
+import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
 
 @Component({
   templateUrl: 'app.html'
@@ -38,19 +32,14 @@ import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 
 export class MyApp {
 
-<<<<<<< HEAD
 @ViewChild(Nav) nav: Nav;
 
 
-  rootPage:any = RegistroPartidosPage;
+  rootPage:any = TabaPartidosAdminPage;
   
   pages: Array<{title: String, Component: any}>;
 
 
-=======
-  rootPage:any = RegistroMarcadorPage;
-  
->>>>>>> 2969ebde0459274cc28c787bb9bb19d2c20a1966
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
