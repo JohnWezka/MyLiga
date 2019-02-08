@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EquiposAdminPage } from '../equipos-admin/equipos-admin';
 
 /**
  * Generated class for the AdministradorPage page.
@@ -20,6 +21,10 @@ export class AdministradorPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AdministradorPage');
+  }
+
+  protected irEquiposAdmin() {
+    this.navCtrl.push(EquiposAdminPage);
   }
 
 }
