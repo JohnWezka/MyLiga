@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar color="capota">
+    <ion-title>Registro partidos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding class="body">
+
+    <ion-grid>
+        <ion-row>
+            
+            <ion-col col-5><img src="../../assets/imgs/nets.jpg"></ion-col>
+            <ion-col col-2 style="font-size: 35px;">VS</ion-col>
+            <ion-col col-5><img src="../../assets/imgs/toronto.jpg"></ion-col>
+        </ion-row>
+    </ion-grid>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Equipo local</ion-label>
+      <ion-select [(ngModel)] = "Local">
+        <ion-option value="BostonCeltics">Boston Celtics </ion-option>
+        <ion-option value="BrooklynNets">Brooklyn Nets</ion-option>
+        <ion-option value="NewYorkKnicks">New York Knicks</ion-option>
+        <ion-option value="Philadelphia"> Philadelphia 76ers</ion-option>
+        <ion-option value="TorontoRaptors">Toronto Raptors</ion-option>
+        <ion-option value="GoldenStateWarriors">Golden State Warriors</ion-option>
+        <ion-option value="ChicagoBulls">Chicago Bulls</ion-option>
+        <ion-option value="HoustonRockets">Houston Rockets</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Equipo visitante</ion-label>
+      <ion-select [(ngModel)] = "visitante">
+          <ion-option value="BostonCeltics">Boston Celtics </ion-option>
+          <ion-option value="BrooklynNets">Brooklyn Nets</ion-option>
+          <ion-option value="NewYorkKnicks">New York Knicks</ion-option>
+          <ion-option value="Philadelphia"> Philadelphia 76ers</ion-option>
+          <ion-option value="TorontoRaptors">Toronto Raptors</ion-option>
+          <ion-option value="GoldenStateWarriors">Golden State Warriors</ion-option>
+          <ion-option value="ChicagoBulls">Chicago Bulls</ion-option>
+          <ion-option value="HoustonRockets">Houston Rockets</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Fecha del partido</ion-label>
+        <ion-input type="Date"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Hora del partido</ion-label>
+      <ion-input type="Time"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Categoria</ion-label>
+    <ion-select [(ngModel)] = "Categoria">
+      <ion-option value="Categoria 1">Categoria 1</ion-option>
+      <ion-option value="Categoria 2">Categoria 2</ion-option>
+    </ion-select>
+  </ion-item>
+
+</ion-list>
+
+
+  <ion-grid>
+      <ion-row>
+          <ion-col col-4></ion-col>
+          <ion-col col-4><button ion-button outline item-end icon-start color="primary" round center>Agregar</button></ion-col>
+          <ion-col col-4></ion-col>
+      </ion-row>
+  </ion-grid>
+
+</ion-content>

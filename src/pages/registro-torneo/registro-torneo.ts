@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the RegistroTorneoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { MenuController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,7 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistroTorneoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public menuCtrl: MenuController,public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  openMenu() {
+    this.menuCtrl.open();
   }
 
   ionViewDidLoad() {

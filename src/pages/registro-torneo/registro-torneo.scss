@@ -1,3 +1,35 @@
+
+
 page-registro-torneo {
+    .ion-header {
+        .Title{
+            background-color:#3b5998;
+        }
+        .header{
+            background-color:#3b5998;
+        }
+        .buttom-menu{
+            color:#3b5998;
+            
+
+        }
+        .ion-title{
+            text-align: left;
+            background-color:#3b5998;   
+        }
+    }
+    .ion-content{
+      //background: linear-gradient(to bottom, #a3d0d9,#3b5998);
+        .Title{
+             text-align: center;
+             //color: #3b5998;
+        }
+        
+        .buttom{
+            background-color: #3b5998;
+            display: block;
+
+        }
+    }
 
 }
