@@ -39,7 +39,7 @@ export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
 
-  rootPage:any = RegistroJugadorPage;
+  rootPage:any = TablaDePuntosPage;
   
   pages: Array<{title: String, Component: any}>;
 
