@@ -27,6 +27,7 @@ import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partid
 import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
+import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equipos';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partido
     RegistroPartidosPage,
     TablaPartidosPage,
     TablaDePuntosPage,
-    TabaPartidosAdminPage
+    TabaPartidosAdminPage,
+    RegistrarEquiposPage
   ],
   imports: [
     BrowserModule,
@@ -84,8 +86,8 @@ import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partido
     RegistroPartidosPage,
     TablaPartidosPage,
     TablaDePuntosPage,
-    TabaPartidosAdminPage
-    
+    TabaPartidosAdminPage,
+    RegistrarEquiposPage
 
   ],
   providers: [

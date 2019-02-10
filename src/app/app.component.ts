@@ -22,6 +22,7 @@ import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroMarcadorPage } from '../pages/registro-marcador/registro-marcador';
+import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equipos';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,7 +32,7 @@ export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
 
-  rootPage:any = TabPage;
+  rootPage:any = RegistroUsuariosPage;
   
   pages: Array<{title: String, Component: any}>;
       // Here you can do any higher level native things you might need.
