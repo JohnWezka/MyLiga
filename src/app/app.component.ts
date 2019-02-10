@@ -31,9 +31,8 @@ import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equip
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
-
   rootPage:any = RegistroUsuariosPage;
-  
+
   pages: Array<{title: String, Component: any}>;
       // Here you can do any higher level native things you might need.
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
