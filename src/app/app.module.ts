@@ -53,7 +53,8 @@ import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partido
     RegistroPartidosPage,
     TablaPartidosPage,
     TablaDePuntosPage,
-    TabaPartidosAdminPage
+    TabaPartidosAdminPage,
+    EquiposPage
   ],
   imports: [
     BrowserModule,
@@ -84,7 +85,8 @@ import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partido
     RegistroPartidosPage,
     TablaPartidosPage,
     TablaDePuntosPage,
-    TabaPartidosAdminPage
+    TabaPartidosAdminPage,
+    EquiposPage
     
 
   ],

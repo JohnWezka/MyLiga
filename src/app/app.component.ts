@@ -21,14 +21,13 @@ import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 
 import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
 
-
-
 import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
 
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
+import { EquiposPage } from '../pages/equipos/equipos';
 
 @Component({
   templateUrl: 'app.html'
@@ -39,7 +38,7 @@ export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
 
-  rootPage:any = TabsAdminPage;
+  rootPage:any = RegistroJugadorPage;
   
   pages: Array<{title: String, Component: any}>;
 
