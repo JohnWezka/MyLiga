@@ -13,7 +13,6 @@ import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
-
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
@@ -28,17 +27,16 @@ import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partido
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
 import { EquiposPage } from '../pages/equipos/equipos';
+import { MarcadorPage } from '../pages/marcador/marcador';
 
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
-
 @ViewChild(Nav) nav: Nav;
 
-
-  rootPage:any = RegistroJugadorPage;
+  rootPage:any = MarcadorPage;
   
   pages: Array<{title: String, Component: any}>;
 

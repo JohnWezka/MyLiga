@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MarcadorPage } from '../marcador/marcador';
 
 /**
  * Generated class for the TablaPartidosPage page.
@@ -20,6 +21,10 @@ export class TablaPartidosPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TablaPartidosPage');
+  }
+
+  public irMarcador() {
+    this.navCtrl.push(MarcadorPage);
   }
 
 }
