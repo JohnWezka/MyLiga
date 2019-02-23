@@ -25,7 +25,7 @@ import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 export class MyApp {
 
   rootPage:any = RegistroMarcadorPage;
-  
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
