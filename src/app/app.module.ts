@@ -33,7 +33,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { LigasProvider } from '../providers/ligas/ligas';
 import { MarcadorProvider } from '../providers/marcador/marcador';
 
@@ -80,7 +80,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -118,8 +119,13 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireDatabase,
     AngularFireDatabaseModule,
+<<<<<<< HEAD
     LigasProvider,
     MarcadorProvider
+=======
+    AngularFirestoreModule,
+    LigasProvider
+>>>>>>> a02f771fea37324ef4049b94d0977964859f7c0a
   ]
 })
 export class AppModule {}
