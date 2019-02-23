@@ -35,6 +35,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { LigasProvider } from '../providers/ligas/ligas';
+import { MarcadorProvider } from '../providers/marcador/marcador';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCrrASgB21Xwu1HKPkEMxyJRtSsrgGyr1g",
@@ -117,7 +118,8 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireDatabase,
     AngularFireDatabaseModule,
-    LigasProvider
+    LigasProvider,
+    MarcadorProvider
   ]
 })
 export class AppModule {}
