@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireStorage, AngularFireStorageReference, AngularFireStorageModule} from 'angularfire2/storage';
+import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
+import {  AngularFireStorage, AngularFireStorageReference, AngularFireStorageModule} from 'angularfire2/storage';
 
 
 /*
@@ -13,14 +14,15 @@ import { AngularFireStorage, AngularFireStorageReference, AngularFireStorageModu
 @Injectable()
 export class LigasProvider {
 
-  constructor(public afDB: AngularFireDatabase,
+  constructor(public afDB: AngularFireDatabase ,private fireStore: AngularFirestore /*
     private angularFireStorage: AngularFireStorage,
     private angularFireStorageReference: AngularFireStorageReference,
-    private angularFireStorageModule: AngularFireStorageModule) {
+    private angularFireStorageModule: AngularFireStorageModule*/) {
   }
 
   public getLigas() {
-    return this.afDB.list('/ligas/');
+    //return this.afDB.list('/ligas/');
+    return this.fireStore.collection("ligas").get();
   }
 
   /*public getLigas2() {
