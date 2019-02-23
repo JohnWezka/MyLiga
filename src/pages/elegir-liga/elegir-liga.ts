@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabPage } from '../tab/tab';
+import { LigasProvider } from '../../providers/ligas/ligas';
 
 /**
  * Generated class for the ElegirLigaPage page.
@@ -16,7 +17,16 @@ import { TabPage } from '../tab/tab';
 })
 export class ElegirLigaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ligas: any = [];
+
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
+    private ligasProvider: LigasProvider) {
+      this.ligasProvider.getLigas().valueChanges().subscribe((ligas) => {
+        this.ligas = ligas;
+        console.log(this.ligas);
+        console.log(ligas);
+      });
   }
 
   ionViewDidLoad() {

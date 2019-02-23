@@ -7,70 +7,85 @@
 </ion-header>
 
 
-<ion-content padding color="gris">
+<ion-content padding>
+
+  <ion-grid class="marcador">
+    <ion-row>
+      <ion-card-content col-4>
+        <ion-avatar>
+          <img src="https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png">
+          <h1 text-center>12</h1>
+        </ion-avatar>
+      </ion-card-content>
+      <ion-col col-4>
+        <p text-center class="tiempo">C2<br>
+          11:33<p>
+      </ion-col>
+      <ion-card-content col-4>
+        <ion-avatar>
+          <img src="https://enebea.global.nba.com/media/img/teams/logos/CHI_logo.svg">
+          <h1 text-center>17</h1>
+        </ion-avatar>
+      </ion-card-content>
+    </ion-row>
+
+    <div padding>
+      <ion-segment [(ngModel)]="Tabla">
+        <ion-segment-button value="Enfrentamiento">
+          Enfrentamiento
+        </ion-segment-button>
+        <ion-segment-button value="Estadisticas">
+          Estadisticas
+        </ion-segment-button>
+        <ion-segment-button value="Resumen">
+          Resumen
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+  </ion-grid>
 
 
-  <ion-card color="primary">
-    <ion-grid class="marcador">
-      <ion-row>
-        <ion-card-content col-4>
-          <ion-avatar>
-            <img src="https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png">
-            <h1 class="local">12</h1>
-          </ion-avatar>
-        </ion-card-content>
-        <ion-col col-4>
-          <p text-center class="tiempo">C2<br>
-            11:33<p>
-        </ion-col>
-        <ion-card-content col-4>
-          <ion-avatar>
-            <img src="https://enebea.global.nba.com/media/img/teams/logos/CHI_logo.svg">
-            <h1 class="visitante">17 </h1>
-          </ion-avatar>
-        </ion-card-content>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
-  <ion-card>
-    <table class="estadisticas">
+
+  <div [ngSwitch]="Tabla">
+    <table class="estadisticas" *ngSwitchCase="'Enfrentamiento'">
       <tr>
         <th>Equipo1</th>
         <th></th>
         <th>Equipo2</th>
       </tr>
       <tr>
-        <td class="izquierda">68%</td>
+        <td>68%</td>
         <td text-center>TC%</td>
         <td class="derecha">34%</td>
       </tr>
       <tr>
-        <td class="izquierda">57%</td>
+        <td>57%</td>
         <td text-center>3P%</td>
         <td class="derecha">100%</td>
       </tr>
       <tr>
-        <td class="izquierda">87.5%</td>
+        <td>87.5%</td>
         <td text-center>TL%</td>
         <td class="derecha">100%</td>
       </tr>
       <tr>
-        <td class="izquierda">7</td>
+        <td>7</td>
         <td text-center>Asistencias</td>
-        <td class="derecha">10</td>
+        <td text-right>10</td>
       </tr>
       <tr>
-        <td class="izquierda">15</td>
+        <td>15</td>
         <td text-center>Rebotes totales</td>
-        <td class="derecha">9</td>
+        <td text-right>9</td>
       </tr>
       <tr>
-        <td class="izquierda">3</td>
+        <td>3</td>
         <td text-center>Rebotes ofensivos</td>
         <td class="derecha">2</td>
       </tr>
       <tr>
-        <td class="izquierda">3</td>
+        <td>3</td>
         <td text-center>Rebotes defensivos</td>
         <td class="derecha">2</td>
       </tr>
@@ -90,20 +105,50 @@
         <td class="derecha">2</td>
       </tr>
       <tr>
-        <td class="izquierda">3</td>
+        <td>3</td>
         <td text-center>Perdidas</td>
         <td class="derecha">2</td>
       </tr>
       <tr>
-        <td class="izquierda">3</td>
+        <td>3</td>
         <td text-center>Puntos tras recuperacion</td>
         <td class="derecha">2</td>
       </tr>
       <tr>
-        <td class="izquierda">3</td>
+        <td>3</td>
         <td text-center>Faltas</td>
         <td class="derecha">2</td>
       </tr>
     </table>
-  </ion-card>
+
+    <table class="estadisticas" *ngSwitchCase="'Estadisticas'">
+        <tr>
+          <th>Equipo1</th>
+          <th></th>
+          <th>Equipo2</th>
+        </tr>
+        <tr>
+          <td>68%</td>
+          <td text-center>TC%</td>
+          <td class="derecha">34%</td>
+        </tr>
+        <tr>
+          <td>57%</td>
+          <td text-center>3P%</td>
+          <td class="derecha">100%</td>
+        </tr>
+        <tr>
+          <td>87.5%</td>
+          <td text-center>TL%</td>
+          <td class="derecha">100%</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td text-center>Asistencias</td>
+          <td text-right>10</td>
+        </tr>
+      </table>
+  </div>
+
+
 </ion-content>
