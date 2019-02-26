@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  liga: any;
 
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams) {
+    if (navParams.get('id')) {
+      this.liga = navParams.get('id');
+      console.log('id' , this.liga);
+    } else {
+      console.log('no id');
+    }
   }
 
 }

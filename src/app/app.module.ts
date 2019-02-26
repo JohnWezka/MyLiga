@@ -35,6 +35,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { LigasProvider } from '../providers/ligas/ligas';
+import { JugadoresProvider } from '../providers/jugadores/jugadores';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCrrASgB21Xwu1HKPkEMxyJRtSsrgGyr1g",
@@ -118,7 +119,8 @@ export const firebaseConfig = {
     AngularFireDatabase,
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    LigasProvider
+    LigasProvider,
+    JugadoresProvider
   ]
 })
 export class AppModule {}

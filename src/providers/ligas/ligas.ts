@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
-import {  AngularFireStorage, AngularFireStorageReference, AngularFireStorageModule} from 'angularfire2/storage';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 
 /*
@@ -14,42 +13,16 @@ import {  AngularFireStorage, AngularFireStorageReference, AngularFireStorageMod
 @Injectable()
 export class LigasProvider {
 
-  constructor(public afDB: AngularFireDatabase ,private fireStore: AngularFirestore /*
-    private angularFireStorage: AngularFireStorage,
-    private angularFireStorageReference: AngularFireStorageReference,
-    private angularFireStorageModule: AngularFireStorageModule*/) {
+  constructor(public afDB: AngularFireDatabase ,
+    private fireStore: AngularFirestore) {
   }
 
   public getLigas() {
-    //return this.afDB.list('/ligas/');
     return this.fireStore.collection("ligas").get();
   }
 
-  /*public getLigas2() {
-    var tabla = document.getElementById('tabla');
-    tabla.innerHTML = '';
-    this.angularFireStorage.collection("ligas");
-    .onSnapshot((querySnapshot) => {
-      tabla.innerHTML = '';
-      querySnapshot.forEach((doc) => {
-
-        tabla.innerHTML += `
-        <tr>
-          <th scope="row">${doc.id}</th>
-          <td>${doc.data().nombreLiga}</td>
-          <td>${doc.data().nombreDueno}</td>
-          <td>${doc.data().descripcion}</td>
-          <td><button class="btn btn-warning" id="boton" onclick="actualizarLiga('${doc.id}','${doc.data().nombreLiga}',
-          '${doc.data().nombreDueno}','${doc.data().descripcion}')">Editar</button></td>
-          <td><button class="btn red accent-4" id="boton" onclick="eliminarLiga('${doc.id}')">Eliminar</button></td>
-        </tr>
-        `;
-      });
-    });
-  }*/
-
   public getLiga(id) {
-    return this.afDB.object('/ligas/' + id);
+    return this.fireStore.collection("ligas").get(id);
   }
 
 }
