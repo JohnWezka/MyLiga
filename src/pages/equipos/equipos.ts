@@ -32,10 +32,13 @@ export class EquiposPage {
   equipos: Observable<Equipo[]>
 
   equipo: any = {};
+  liga: any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
+    this.liga = navParams.data;
+    console.log(this.liga);
     this.equipoCollection = angularFirestore.collection('equipos');
     this.equipos = this.equipoCollection.valueChanges();
   }

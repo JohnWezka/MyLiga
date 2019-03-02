@@ -86,7 +86,7 @@ export class ElegirLigaPage {
 
   public irHome(id) {
     console.log(id);
-    this.navCtrl.setRoot(TabPage, id);
+    this.navCtrl.setRoot(TabPage, {idLiga: id});
   }
 
 }
