@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabPage } from '../tab/tab';
-import { LigasProvider } from '../../providers/ligas/ligas';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 
@@ -34,7 +33,6 @@ export class ElegirLigaPage {
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    private ligasProvider: LigasProvider,
     private angularFirestore: AngularFirestore) {
     this.ligaCollection = this.angularFirestore.collection('ligas');
     this.ligas = this.ligaCollection.valueChanges();

@@ -22,7 +22,7 @@ export class LigasProvider {
   }
 
   public getLiga(id) {
-    return this.fireStore.collection("ligas").get(id);
+    return this.fireStore.collection("ligas").doc(id);
   }
 
 }
