@@ -15,12 +15,12 @@
 
 <ion-content padding>
 
-  <ion-list>
+  <ion-list *ngFor = "let liga of ligas">
     <ion-item (click) = "irHome()">
       <ion-avatar item-start>
-        <img src="http://blog.logomyway.com/wp-content/uploads/2017/01/nba-logo-design.jpg">
+        <img src="{{liga.foto}}">
       </ion-avatar>
-      <h2>NBA</h2>
+      <h2>{{liga.nombreLiga}}</h2>
     </ion-item>
   </ion-list>
 

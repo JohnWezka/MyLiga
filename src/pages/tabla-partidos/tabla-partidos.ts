@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EquiposAdminPage } from '../equipos-admin/equipos-admin';
+import { MarcadorPage } from '../marcador/marcador';
 
 /**
- * Generated class for the AdministradorPage page.
+ * Generated class for the TablaPartidosPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +11,20 @@ import { EquiposAdminPage } from '../equipos-admin/equipos-admin';
 
 @IonicPage()
 @Component({
-  selector: 'page-administrador',
-  templateUrl: 'administrador.html',
+  selector: 'page-tabla-partidos',
+  templateUrl: 'tabla-partidos.html',
 })
-export class AdministradorPage {
+export class TablaPartidosPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AdministradorPage');
+    console.log('ionViewDidLoad TablaPartidosPage');
   }
 
-  protected irEquiposAdmin() {
-    this.navCtrl.push(EquiposAdminPage);
+  public irMarcador() {
+    this.navCtrl.push(MarcadorPage);
   }
 
 }

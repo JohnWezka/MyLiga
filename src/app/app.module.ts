@@ -23,8 +23,28 @@ import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
-import { RegistroMarcadorPage }from '../pages/registro-marcador/registro-marcador';
+import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
+import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
+import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
+import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equipos';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { LigasProvider } from '../providers/ligas/ligas';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyCrrASgB21Xwu1HKPkEMxyJRtSsrgGyr1g",
+    authDomain: "myleague-5a9c8.firebaseapp.com",
+    databaseURL: "https://myleague-5a9c8.firebaseio.com",
+    projectId: "myleague-5a9c8",
+    storageBucket: 'gs://myleague-5a9c8.appspot.com/',
+    messagingSenderId: "167455229801"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -47,12 +67,20 @@ import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
-    RegistroMarcadorPage,
-    TablaDePuntosPage
+    RegistroPartidosPage,
+    TablaPartidosPage,
+    TablaDePuntosPage,
+    TabaPartidosAdminPage,
+    RegistrarEquiposPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -76,14 +104,21 @@ import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
     RegistroUsuariosPage,
     ElegirLigaPage,
     JugadorInfoPage,
-    RegistroMarcadorPage,
-    TablaDePuntosPage
+    RegistroPartidosPage,
+    TablaPartidosPage,
+    TablaDePuntosPage,
+    TabaPartidosAdminPage,
+    RegistrarEquiposPage
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireDatabase,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    LigasProvider
   ]
 })
 export class AppModule {}
