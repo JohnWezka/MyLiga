@@ -6,81 +6,61 @@
 -->
 <ion-header>
 
-  <ion-navbar color="capota">
-    <ion-title>Equipos</ion-title>
-  </ion-navbar>
+    <ion-navbar color="capota">
+        <ion-title>Equipos</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="ion-content">
 
-  <ion-card>
-    <ion-card-header>
-      Categoria
-    </ion-card-header>
+    <ion-card>
+        <ion-card-header>
+            Infantil
+        </ion-card-header>
 
-    <ion-list>
+        <ion-list *ngFor="let equipo of equipos | async">
+            <ion-item *ngIf="equipo.nombreCategoria == 'Infantil'">
+                <ion-thumbnail item-start>
+                    <img src="{{equipo.foto}}">
+                </ion-thumbnail>
+                <h2>{{equipo.nombreEquipo}}</h2>
+                <button (click)="toEquipo(equipo)" ion-button clear item-end>View</button>
+            </ion-item>
+        </ion-list>
+    </ion-card>
 
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/bos.png&h=80&w=80&scale=crop">
-        </ion-thumbnail>
-        <h2>Celtics</h2>
-        <p>Boston</p>
-        <button (click)="toEquipo()" ion-button clear item-end>View</button>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/bkn.png&h=80&w=80&scale=crop">
-        </ion-thumbnail>
-        <h2>Nets</h2>
-        <p>Brooklyn</p>
-        <button (click)="toEquipo()" ion-button clear item-end>View</button>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/ny.png&h=80&w=80&scale=crop">
-        </ion-thumbnail>
-        <h2>Knicks</h2>
-        <p>New York</p>
-        <button (click)="toEquipo()" ion-button clear item-end>View</button>
-      </ion-item>
-    </ion-list>
-  </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Juvenil
+        </ion-card-header>
 
-  <ion-card>
-      <ion-card-header>
-        Categoria
-      </ion-card-header>
-  
-      <ion-list>
-  
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/bos.png&h=80&w=80&scale=crop">
-          </ion-thumbnail>
-          <h2>Celtics</h2>
-          <p>Boston</p>
-          <button (click)="toEquipo()" ion-button clear item-end>View</button>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/bkn.png&h=80&w=80&scale=crop">
-          </ion-thumbnail>
-          <h2>Nets</h2>
-          <p>Brooklyn</p>
-          <button (click)="toEquipo()" ion-button clear item-end>View</button>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/ny.png&h=80&w=80&scale=crop">
-          </ion-thumbnail>
-          <h2>Knicks</h2>
-          <p>New York</p>
-          <button (click)="toEquipo()" ion-button clear item-end>View</button>
-        </ion-item>
-      </ion-list>
+        <ion-list *ngFor="let equipo of equipos | async">
+            <ion-item *ngIf="equipo.nombreCategoria == 'Juvenil'">
+                <ion-thumbnail item-start>
+                    <img src="{{equipo.foto}}">
+                </ion-thumbnail>
+                <h2>{{equipo.nombreEquipo}}</h2>
+                <button (click)="toEquipo(equipo)" ion-button clear item-end>View</button>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+            Libre
+        </ion-card-header>
+
+        <ion-list *ngFor="let equipo of equipos | async">
+            <ion-item *ngIf="equipo.nombreCategoria == 'Libre' && equipo.idLiga == liga">
+                <ion-thumbnail item-start>
+                    <img src="{{equipo.foto}}">
+                </ion-thumbnail>
+                <h2>{{equipo.nombreEquipo}}</h2>
+                <button (click)="toEquipo(equipo)" ion-button clear item-end>View</button>
+            </ion-item>
+        </ion-list>
     </ion-card>
 
 </ion-content>

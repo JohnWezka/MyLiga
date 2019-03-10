@@ -35,14 +35,15 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { LigasProvider } from '../providers/ligas/ligas';
+import { JugadoresProvider } from '../providers/jugadores/jugadores';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCrrASgB21Xwu1HKPkEMxyJRtSsrgGyr1g",
-    authDomain: "myleague-5a9c8.firebaseapp.com",
-    databaseURL: "https://myleague-5a9c8.firebaseio.com",
-    projectId: "myleague-5a9c8",
-    storageBucket: 'gs://myleague-5a9c8.appspot.com/',
-    messagingSenderId: "167455229801"
+  apiKey: "AIzaSyDu92rdtAJ-mOjDF2IoMua6gM5S_1RaMMU",
+    authDomain: "myleague-a4d04.firebaseapp.com",
+    databaseURL: "https://myleague-a4d04.firebaseio.com",
+    projectId: "myleague-a4d04",
+    storageBucket: "myleague-a4d04.appspot.com",
+    messagingSenderId: "468908962623"
 };
 
 @NgModule({
@@ -118,7 +119,8 @@ export const firebaseConfig = {
     AngularFireDatabase,
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    LigasProvider
+    LigasProvider,
+    JugadoresProvider
   ]
 })
 export class AppModule {}

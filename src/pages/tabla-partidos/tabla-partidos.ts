@@ -1,7 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MarcadorPage } from '../marcador/marcador';
+import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
 
+interface Partidos {
+  id: string;
+  fecha: string;
+  hora: string;
+  jornada: string;
+  local: string;
+  visitante: string;
+  lugar: string;
+}
 /**
  * Generated class for the TablaPartidosPage page.
  *
@@ -16,7 +27,18 @@ import { MarcadorPage } from '../marcador/marcador';
 })
 export class TablaPartidosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  partidoCollection: AngularFirestoreCollection<Partidos>;
+  partidos: Observable<Partidos[]>;
+
+  idLiga: any = {};
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private angularFirestore: AngularFirestore) {
+    this.idLiga = navParams.data;
+    console.log(this.idLiga);
+    this.partidoCollection = this.angularFirestore.collection('Partido');
+    this.partidos = this.partidoCollection.valueChanges();
   }
 
   ionViewDidLoad() {
