@@ -17,7 +17,7 @@
 
 
   <ion-card class="marcador" *ngFor = "let partido of partidos | async">
-    <div (click) = "irMarcador()">
+    <div (click) = "irMarcador()" *ngIf ="partido.idLiga == liga">
       <ion-grid >
         <ion-row>
           <ion-card-content col-4>
@@ -39,29 +39,6 @@
         </ion-row>
       </ion-grid>
     </div>
-  </ion-card>
-  
-  <ion-card class="marcador" (click) = "irMarcador()">
-    <ion-grid >
-      <ion-row>
-        <ion-card-content col-4>
-          <ion-avatar>
-            <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/phi.png&h=80&w=80&scale=crop"x>
-            <h1 class="local">Seven six</h1>
-          </ion-avatar>
-        </ion-card-content>
-        <ion-col col-4>
-            <p text-center class="tiempo">20 Febrero<br>
-              13:00<p>
-        </ion-col>
-        <ion-card-content col-4>
-          <ion-avatar>
-            <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/tor.png&h=80&w=80&scale=crop">
-            <h1 class="visitante">Raptors </h1>
-          </ion-avatar>
-        </ion-card-content>
-      </ion-row>
-    </ion-grid>
   </ion-card>
 
 </ion-content>

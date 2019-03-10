@@ -12,6 +12,7 @@ interface Partidos {
   local: string;
   visitante: string;
   lugar: string;
+  idLiga: string;
 }
 /**
  * Generated class for the TablaPartidosPage page.
@@ -30,13 +31,13 @@ export class TablaPartidosPage {
   partidoCollection: AngularFirestoreCollection<Partidos>;
   partidos: Observable<Partidos[]>;
 
-  idLiga: any = {};
+  liga: any = {};
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
-    this.idLiga = navParams.data;
-    console.log(this.idLiga);
+    this.liga = navParams.data;
+    console.log(this.liga);
     this.partidoCollection = this.angularFirestore.collection('Partido');
     this.partidos = this.partidoCollection.valueChanges();
   }

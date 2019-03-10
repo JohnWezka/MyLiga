@@ -21,7 +21,7 @@
         </ion-card-header>
 
         <ion-list *ngFor="let equipo of equipos | async">
-            <ion-item *ngIf="equipo.nombreCategoria == 'Infantil'">
+            <ion-item *ngIf="equipo.nombreCategoria == 'Infantil' && equipo.idLiga == liga">
                 <ion-thumbnail item-start>
                     <img src="{{equipo.foto}}">
                 </ion-thumbnail>
@@ -37,7 +37,7 @@
         </ion-card-header>
 
         <ion-list *ngFor="let equipo of equipos | async">
-            <ion-item *ngIf="equipo.nombreCategoria == 'Juvenil'">
+            <ion-item *ngIf="equipo.nombreCategoria == 'Juvenil' && equipo.idLiga == liga">
                 <ion-thumbnail item-start>
                     <img src="{{equipo.foto}}">
                 </ion-thumbnail>

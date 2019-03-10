@@ -5,7 +5,7 @@ import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/fires
 import { Observable } from 'rxjs/Observable';
 
 interface Ligas {
-  id: string;
+  userID: string;
   nombreLiga: string;
   nombreDueno: string;
   descripcion: string;
