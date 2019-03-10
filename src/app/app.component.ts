@@ -31,10 +31,15 @@ import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equip
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
+<<<<<<< HEAD
+  rootPage:any = RegistroMarcadorPage;
+
+=======
   rootPage:any = RegistroUsuariosPage;
 
   pages: Array<{title: String, Component: any}>;
       // Here you can do any higher level native things you might need.
+>>>>>>> a02f771fea37324ef4049b94d0977964859f7c0a
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
