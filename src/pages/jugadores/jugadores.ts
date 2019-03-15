@@ -37,6 +37,7 @@ export class JugadoresPage {
   jugadores: Observable<Jugador[]>
 
   jugador: any = {};
+  equipo: any = {};
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
@@ -58,6 +59,12 @@ export class JugadoresPage {
         //console.log(`${doc.id} => ${doc.data()}`);
       });
     });*/
+    if (navParams.get('equipo')) {
+      this.equipo = navParams.get('equipo');
+      console.log(this.jugador);
+    } else {
+      console.log("no jugador")
+    }
   }
 
   public toInfo(){

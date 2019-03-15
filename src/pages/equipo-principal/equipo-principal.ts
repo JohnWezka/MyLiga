@@ -16,11 +16,13 @@ import { JugadoresPage } from '../jugadores/jugadores';
 })
 export class EquipoPrincipalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams) {
+
   }
 
   public toJugadores(){
-    this.navCtrl.push(JugadoresPage);
+    this.navCtrl.push(JugadoresPage, {equipo: });
   }
 
   ionViewDidLoad() {

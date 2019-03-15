@@ -13,7 +13,6 @@ import { EquiposPage } from '../pages/equipos/equipos';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { RegistrarsePage } from '../pages/registrarse/registrarse';
-import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { AdministradorPage } from '../pages/administrador/administrador';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
@@ -58,7 +57,6 @@ export const firebaseConfig = {
     JugadoresPage,
     ConfiguracionPage,
     RegistrarsePage,
-    RegistroArbitrosPage,
     RegistroLigaPage,
     EquipoPrincipalPage,
     AdministradorPage,
@@ -95,7 +93,6 @@ export const firebaseConfig = {
     JugadoresPage,
     ConfiguracionPage,
     RegistrarsePage,
-    RegistroArbitrosPage,
     RegistroLigaPage,
     EquipoPrincipalPage,
     AdministradorPage,
