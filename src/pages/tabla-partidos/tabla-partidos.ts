@@ -12,8 +12,20 @@ interface Partidos {
   local: string;
   visitante: string;
   lugar: string;
+  categoria: string;
   idLiga: string;
 }
+
+interface Equipo {
+  nombreEquipo: string;
+  nombreEntrenador: string;
+  nombreCategoria: string;
+  nombreAsistente: string;
+  idEquipo: string;
+  descripcion: string;
+  foto: string;
+}
+
 /**
  * Generated class for the TablaPartidosPage page.
  *
@@ -28,6 +40,11 @@ interface Partidos {
 })
 export class TablaPartidosPage {
 
+  equipoCollection: AngularFirestoreCollection<Equipo>;
+  equipos: Observable<Equipo[]>
+
+  equipo: any = {};
+
   partidoCollection: AngularFirestoreCollection<Partidos>;
   partidos: Observable<Partidos[]>;
 
@@ -38,6 +55,8 @@ export class TablaPartidosPage {
     private angularFirestore: AngularFirestore) {
     this.liga = navParams.data;
     console.log(this.liga);
+    this.equipoCollection = angularFirestore.collection('equipos');
+    this.equipos = this.equipoCollection.valueChanges();
     this.partidoCollection = this.angularFirestore.collection('Partido');
     this.partidos = this.partidoCollection.valueChanges();
   }
