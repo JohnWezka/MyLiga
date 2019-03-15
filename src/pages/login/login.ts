@@ -1,4 +1,4 @@
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegistrarsePage } from '../registrarse/registrarse';
 import { AdministradorPage } from '../administrador/administrador';
@@ -18,18 +18,19 @@ import { TabsAdminPage } from '../tabs-admin/tabs-admin';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  liga: any;
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams) {
+    this.liga = navParams.data;
+    console.log(this.liga);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  
-  irRegistro(){
-    this.navCtrl.push(RegistrarsePage);
-  }
 
-  public irHomeAdmin(){
+  public irHomeAdmin() {
     this.navCtrl.setRoot(TabsAdminPage);
   }
 

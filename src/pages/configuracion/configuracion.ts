@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the ConfiguracionPage page.
@@ -15,7 +16,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ConfiguracionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  liga: any;
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams) {
+    this.liga = navParams.data;
+    console.log(this.liga);
+  }
+
+  login() {
+    this.navCtrl.push(LoginPage, { liga: this.liga });
   }
 
   ionViewDidLoad() {

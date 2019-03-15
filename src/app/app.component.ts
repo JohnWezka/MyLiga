@@ -10,7 +10,6 @@ import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
 import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
-import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
@@ -31,15 +30,10 @@ import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equip
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
-<<<<<<< HEAD
-  rootPage:any = RegistroMarcadorPage;
-
-=======
   rootPage:any = RegistroUsuariosPage;
 
   pages: Array<{title: String, Component: any}>;
       // Here you can do any higher level native things you might need.
->>>>>>> a02f771fea37324ef4049b94d0977964859f7c0a
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -49,7 +43,6 @@ export class MyApp {
 
       this.pages=[{title: 'Home', Component: HomePage},
                   {title: 'Jugadores', Component: JugadoresPage},
-                  {title: 'Registro de Arbitros', Component: RegistroArbitrosPage},
                   {title: 'Registro de Torneos', Component: RegistroTorneoPage},
                   {title: 'Registro de Torneos', Component: RegistroTorneoPage}];
     });
