@@ -35,6 +35,8 @@ export class JugadorInfoPage {
 
   jugador: any = {};
 
+  age: any;
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
@@ -43,15 +45,18 @@ export class JugadorInfoPage {
 
       if (navParams.get('jugador')) {
         this.jugador = navParams.get('jugador');
-        console.log(this.jugador);
+        console.log(this.jugador.fechaNacimiento);
       } else {
         console.log("no jugador")
       }
-
+this.edad();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad JugadorInfoPage');
+  }
+   edad(){
+    this.age=((Date.now() - this.jugador.fechaNacimiento || Date.now()) / (24 * 3600 * 365.25 * 1000));
   }
 
 }

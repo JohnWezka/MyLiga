@@ -15,17 +15,17 @@
 
 <ion-content padding class="ion-content">
 
-      <ion-list>
-<div *ngFor = "let jugador of jugadores | async">
-          <ion-item *ngIf="jugador.equipo == equipo">
-            <ion-thumbnail item-start>
-              <img src={{jugador.foto}}>
-            </ion-thumbnail>
-            <h2>{{jugador.nombre}}</h2>
-            <p>{{jugador.equipo}}</p>
-            <button (click) = "jugadorInfo(jugador)" ion-button clear item-end>View</button>
-          </ion-item>
-        </div>
-        </ion-list>
+  <ion-list>
+    <div *ngFor="let jugador of jugadores | async">
+      <ion-item *ngIf="jugador.equipo == equipo.idEquipo">
+        <ion-thumbnail item-start>
+          <img src={{jugador.foto}}>
+        </ion-thumbnail>
+        <h2>{{jugador.nombre}}</h2>
+        <p>{{jugador.equipo}}</p>
+        <button (click)="jugadorInfo(jugador)" ion-button clear item-end>View</button>
+      </ion-item>
+    </div>
+  </ion-list>
 
 </ion-content>

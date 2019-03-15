@@ -61,7 +61,7 @@ export class JugadoresPage {
     });*/
     if (navParams.get('equipo')) {
       this.equipo = navParams.get('equipo');
-      console.log(this.jugador);
+      console.log(this.equipo);
     } else {
       console.log("no jugador")
     }

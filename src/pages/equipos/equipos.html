@@ -21,13 +21,14 @@
         </ion-card-header>
 
         <ion-list *ngFor="let equipo of equipos | async">
-            <ion-item *ngIf="equipo.nombreCategoria == 'Infantil' && equipo.idLiga == liga">
+            <div *ngIf="equipo.nombreCategoria == 'Infantil' && equipo.idLiga == liga">
+            <ion-item (click)="toEquipo(equipo)">
                 <ion-thumbnail item-start>
-                    <img src="{{equipo.foto}}">
+                    <img src="{{equipo.foto}}" >
                 </ion-thumbnail>
                 <h2>{{equipo.nombreEquipo}}</h2>
-                <button (click)="toEquipo(equipo)" ion-button clear item-end>View</button>
             </ion-item>
+            </div>
         </ion-list>
     </ion-card>
 

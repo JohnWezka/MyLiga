@@ -31,7 +31,6 @@ export class EquiposPage {
   equipoCollection: AngularFirestoreCollection<Equipo>;
   equipos: Observable<Equipo[]>
 
-  equipo: any = {};
   liga: any;
 
   constructor(public navCtrl: NavController,
@@ -44,6 +43,7 @@ export class EquiposPage {
   }
 
   public toEquipo(equipo) {
+    console.log(equipo);
     this.navCtrl.push(EquipoPrincipalPage, {equipo: equipo});
   }
 
