@@ -56,6 +56,7 @@ this.edad();
     console.log('ionViewDidLoad JugadorInfoPage');
   }
    edad(){
+    console.log(Date.now());
     this.age=((Date.now() - this.jugador.fechaNacimiento || Date.now()) / (24 * 3600 * 365.25 * 1000));
   }
 
