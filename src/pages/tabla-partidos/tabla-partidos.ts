@@ -16,16 +16,6 @@ interface Partidos {
   idLiga: string;
 }
 
-interface Equipo {
-  nombreEquipo: string;
-  nombreEntrenador: string;
-  nombreCategoria: string;
-  nombreAsistente: string;
-  idEquipo: string;
-  descripcion: string;
-  foto: string;
-}
-
 /**
  * Generated class for the TablaPartidosPage page.
  *
@@ -40,11 +30,6 @@ interface Equipo {
 })
 export class TablaPartidosPage {
 
-  equipoCollection: AngularFirestoreCollection<Equipo>;
-  equipos: Observable<Equipo[]>
-
-  equipo: any = {};
-
   partidoCollection: AngularFirestoreCollection<Partidos>;
   partidos: Observable<Partidos[]>;
 
@@ -55,8 +40,6 @@ export class TablaPartidosPage {
     private angularFirestore: AngularFirestore) {
     this.liga = navParams.data;
     console.log(this.liga);
-    this.equipoCollection = angularFirestore.collection('equipos');
-    this.equipos = this.equipoCollection.valueChanges();
     this.partidoCollection = this.angularFirestore.collection('Partido');
     this.partidos = this.partidoCollection.valueChanges();
   }
@@ -65,8 +48,8 @@ export class TablaPartidosPage {
     console.log('ionViewDidLoad TablaPartidosPage');
   }
 
-  public irMarcador() {
-    this.navCtrl.push(MarcadorPage);
+  public irMarcador(partido) {
+    this.navCtrl.push(MarcadorPage, {partido: partido});
   }
 
 }

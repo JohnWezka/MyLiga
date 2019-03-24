@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, DateTime } from 'ionic-angular';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
-import { Observable } from 'rxjs';
 
 /**
  * Generated class for the JugadorInfoPage page.
@@ -10,19 +9,6 @@ import { Observable } from 'rxjs';
  * Ionic pages and navigation.
  */
 
-interface Jugador {
-  nombre: string;
-  apellidoP: string;
-  apellidoM: string;
-  numero: string;
-  peso: string;
-  estatura: string;
-  curp: string;
-  equipo: string;
-  categoria: string;
-  foto: string;
-}
-
 @IonicPage()
 @Component({
   selector: 'page-jugador-info',
@@ -30,34 +16,34 @@ interface Jugador {
 })
 export class JugadorInfoPage {
 
-  jugadorCollection: AngularFirestoreCollection<Jugador>;
-  jugadores: Observable<Jugador[]>
-
   jugador: any = {};
 
   age: any;
 
-  constructor(public navCtrl: NavController, 
+  fecha: any = new Date;
+
+  constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
-      this.jugadorCollection = angularFirestore.collection('jugadores');
-      this.jugadores = this.jugadorCollection.valueChanges();
-
-      if (navParams.get('jugador')) {
-        this.jugador = navParams.get('jugador');
-        console.log(this.jugador.fechaNacimiento);
-      } else {
-        console.log("no jugador")
-      }
-this.edad();
+    if (navParams.get('jugador')) {
+      this.jugador = navParams.get('jugador');
+      console.log(this.jugador);
+    } else {
+      console.log("no jugador")
+    }
+    this.edad();
+    console.log(this.fecha.getFullYear());
+    console.log(this.jugador.fechaNacimiento.substring(0, 4));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad JugadorInfoPage');
   }
-   edad(){
-    console.log(Date.now());
-    this.age=((Date.now() - this.jugador.fechaNacimiento || Date.now()) / (24 * 3600 * 365.25 * 1000));
+
+  edad() {
+    this.age = this.fecha.getFullYear() - this.jugador.fechaNacimiento.substring(0, 4);
+    //console.log(Date.now());
+    //this.age = ((this.fecha.toLocaleDateString() - this.jugador.fechaNacimiento || this.fecha.toLocaleDateString()) / (24 * 3600 * 365.25 * 1000));
   }
 
 }
