@@ -35,7 +35,7 @@ export class ElegirLigaPage {
     public navParams: NavParams,
     private ligasProvider: LigasProvider,
     private angularFirestore: AngularFirestore) {
-      this.ligaCollection = this.angularFirestore.collection()
+      //this.ligaCollection = this.angularFirestore.collection()
       this.ligasProvider.getLigas().subscribe((ligas) => {
       //this.ligas = ligas;
       /*/ligas.forEach((doc) => {

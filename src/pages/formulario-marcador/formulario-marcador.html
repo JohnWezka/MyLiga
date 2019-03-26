@@ -1,0 +1,63 @@
+<!--
+  Generated template for the FormularioMarcadorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="ion-header">
+  <ion-navbar color="capota" class="header">
+    <ion-title>Registro de marcador</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--
+  <ion-list>
+    <ion-item-sliding *ngFor="let Partido of partidos" style=" border-radius: 30px;">
+      <ion-item (click)=formularioMarcador(Partido)>
+        <ion-card-content class="imgVisitante" col-4>
+          <img src="{{Partido.fotoLocal}}">
+          <h1 text-center>12</h1>
+        </ion-card-content>
+        <ion-col col-4>
+          <p text-center class="tiempo">C2<br>"{{Partido.hora}}"<p>
+        </ion-col>
+        <ion-card-content class="imgLocal" col-4>
+          <img src="{{Partido.fotoVisitante}}">
+          <h1 text-center>17</h1>
+        </ion-card-content>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+-->
+
+
+
+  <ion-list>
+      
+
+    <ion-row *ngFor="let Partido of partidos"  (click)=irAFormulario(Partido)  style="background-color: #efefef; margin: 7px;border-radius: 20px">
+        <ion-card-content col-4>
+          <ion-avatar>
+            <img src="{{Partido.fotoLocal}}">
+            <h1 text-center>{{Partido.nombreLocal}}</h1>
+          </ion-avatar>
+        </ion-card-content>
+
+        <ion-col col-4>
+          <p style="margin-top: 40%;text-align: center" class="tiempo">{{Partido.fecha}}<br>
+            {{Partido.hora}}<p>
+        </ion-col>
+
+        <ion-card-content col-4>
+          <ion-avatar>
+            <img src="{{Partido.fotoVisitante}}">
+            <h1 text-center>{{Partido.nombreVisitante}}</h1>
+          </ion-avatar>
+        </ion-card-content>
+      </ion-row>
+
+  </ion-list>
+
+
+</ion-content>

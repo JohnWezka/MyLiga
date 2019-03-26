@@ -31,20 +31,33 @@ import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equip
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
-import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabaseModule, AngularFireDatabase ,} from '@angular/fire/database';
+
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { LigasProvider } from '../providers/ligas/ligas';
 import { MarcadorProvider } from '../providers/marcador/marcador';
+import { FormularioMarcadorPage } from '../pages/formulario-marcador/formulario-marcador';
+import { FormularioMPage } from '../pages/formulario-m/formulario-m';
+
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCrrASgB21Xwu1HKPkEMxyJRtSsrgGyr1g",
-    authDomain: "myleague-5a9c8.firebaseapp.com",
-    databaseURL: "https://myleague-5a9c8.firebaseio.com",
-    projectId: "myleague-5a9c8",
-    storageBucket: 'gs://myleague-5a9c8.appspot.com/',
-    messagingSenderId: "167455229801"
+  apiKey: "AIzaSyDu92rdtAJ-mOjDF2IoMua6gM5S_1RaMMU",
+    authDomain: "myleague-a4d04.firebaseapp.com",
+    databaseURL: "https://myleague-a4d04.firebaseio.com",
+    projectId: "myleague-a4d04",
+    storageBucket: "myleague-a4d04.appspot.com",
+    messagingSenderId: "468908962623"
+
+  //apiKey: "AIzaSyCrrASgB21Xwu1HKPkEMxyJRtSsrgGyr1g",
+    //authDomain: "myleague-5a9c8.firebaseapp.com",
+    //databaseURL: "https://myleague-5a9c8.firebaseio.com",
+    //projectId: "myleague-5a9c8",
+    //storageBucket: 'gs://myleague-5a9c8.appspot.com/',
+    //messagingSenderId: "167455229801"
 };
+
+
 
 @NgModule({
   declarations: [
@@ -72,7 +85,9 @@ export const firebaseConfig = {
     TablaPartidosPage,
     TablaDePuntosPage,
     TabaPartidosAdminPage,
-    EquiposPage
+    EquiposPage,
+    FormularioMarcadorPage,
+    FormularioMPage
   ],
   imports: [
     BrowserModule,
@@ -81,7 +96,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -109,7 +124,9 @@ export const firebaseConfig = {
     TablaPartidosPage,
     TablaDePuntosPage,
     TabaPartidosAdminPage,
-    EquiposPage
+    EquiposPage,
+    FormularioMarcadorPage,
+    FormularioMPage
     
 
   ],
@@ -119,13 +136,9 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireDatabase,
     AngularFireDatabaseModule,
-<<<<<<< HEAD
     LigasProvider,
-    MarcadorProvider
-=======
-    AngularFirestoreModule,
-    LigasProvider
->>>>>>> a02f771fea37324ef4049b94d0977964859f7c0a
+    MarcadorProvider,
+    AngularFirestoreModule
   ]
 })
 export class AppModule {}

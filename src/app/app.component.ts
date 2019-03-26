@@ -28,6 +28,8 @@ import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
 import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
 import { EquiposPage } from '../pages/equipos/equipos';
 import { MarcadorPage } from '../pages/marcador/marcador';
+import { FormularioMarcadorPage } from '../pages/formulario-marcador/formulario-marcador';
+import { FormularioMPage } from '../pages/formulario-m/formulario-m';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,7 +38,7 @@ import { MarcadorPage } from '../pages/marcador/marcador';
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = MarcadorPage;
+  rootPage:any = FormularioMarcadorPage;
   
   pages: Array<{title: String, Component: any}>;
 
