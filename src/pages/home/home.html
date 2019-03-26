@@ -9,17 +9,20 @@
     <div padding>
         <h2>Estadisticas</h2>
     </div>
-    <ion-card>
-        <img src="https://www.apuestafutbol.net/wp-content/uploads/2018/03/estadisticas-apuestas-deportivas-HT.jpg" />
+    <ion-card *ngFor = "let liga of ligas | async">
+        <div *ngIf = "liga.userID == idLiga">
+            <img src="{{liga.foto}}" />
         <ion-card-content>
             <ion-card-title>
-                Nine Inch Nails Live
+                {{liga.nombreLiga}}
             </ion-card-title>
             <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                {{liga.descripcion}}
             </p>
         </ion-card-content>
+        </div>
     </ion-card>
+
     <div padding>
         <div padding>
             <h2>Top 5 Jugadores</h2>

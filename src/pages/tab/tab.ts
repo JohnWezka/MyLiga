@@ -24,8 +24,12 @@ export class TabPage {
   tab3 = TablaPartidosPage;
   tab4 = ConfiguracionPage;
 
+  idLiga: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams) {
+    this.idLiga = this.navParams.get('idLiga');
+    console.log(this.idLiga);
   }
 
   ionViewDidLoad() {

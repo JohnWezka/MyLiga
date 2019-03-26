@@ -16,11 +16,20 @@ import { JugadoresPage } from '../jugadores/jugadores';
 })
 export class EquipoPrincipalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  equipo: any = {};
+
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams) {
+      if (navParams.get('equipo')) {
+        this.equipo = navParams.get('equipo');
+        console.log(this.equipo);
+      } else {
+        console.log("no jugador")
+      }
   }
 
   public toJugadores(){
-    this.navCtrl.push(JugadoresPage);
+    this.navCtrl.push(JugadoresPage, {equipo: this.equipo});
   }
 
   ionViewDidLoad() {

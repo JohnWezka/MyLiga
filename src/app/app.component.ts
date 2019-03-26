@@ -10,7 +10,6 @@ import { TabPage } from '../pages/tab/tab';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
 import { EquipoPrincipalPage } from '../pages/equipo-principal/equipo-principal';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
-import { RegistroArbitrosPage } from '../pages/registro-arbitros/registro-arbitros';
 import { RegistroLigaPage } from '../pages/registro-liga/registro-liga';
 import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
@@ -51,7 +50,6 @@ export class MyApp {
 
       this.pages=[{title: 'Home', Component: HomePage},
                   {title: 'Jugadores', Component: JugadoresPage},
-                  {title: 'Registro de Arbitros', Component: RegistroArbitrosPage},
                   {title: 'Registro de Torneos', Component: RegistroTorneoPage},
                   {title: 'Registro de Torneos', Component: RegistroTorneoPage}];
     });

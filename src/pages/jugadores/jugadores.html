@@ -14,42 +14,18 @@
 
 
 <ion-content padding class="ion-content">
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img
-          src="http://ssref.net/scripts/image_resize.cgi?min=200&url=https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/jordami01.jpg">
-      </ion-thumbnail>
-      <h2>Michael Jordan</h2>
-      <p>Chicago Bulls • 9</p>
-      <button (click)="toInfo()" ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img
-          src="http://ssref.net/scripts/image_resize.cgi?min=200&url=https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/birdla01.jpg">
-      </ion-thumbnail>
-      <h2>Larry Bird</h2>
-      <p>Boston Celtics • 7</p>
-      <button (click)="toInfo()" ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img
-          src="http://ssref.net/scripts/image_resize.cgi?min=200&url=https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/barklch01.jpg">
-      </ion-thumbnail>
-      <h2>Charles Barkley</h2>
-      <p>Phoenix Suns • 14</p>
-      <button (click)="toInfo()" ion-button clear item-end>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img
-          src="http://ssref.net/scripts/image_resize.cgi?min=200&url=https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/johnsma02.jpg">
-      </ion-thumbnail>
-      <h2>Magic Jhonson</h2>
-      <p>Los Angeles Lakers • 15</p>
-      <button (click)="toInfo()" ion-button clear item-end>View</button>
-    </ion-item>
 
+  <ion-list>
+    <div *ngFor="let jugador of jugadores | async">
+      <ion-item *ngIf="jugador.equipo == equipo.idEquipo">
+        <ion-thumbnail item-start>
+          <img src={{jugador.foto}}>
+        </ion-thumbnail>
+        <h2>{{jugador.nombre}}</h2>
+        <p>{{jugador.equipo}}</p>
+        <button (click)="jugadorInfo(jugador)" ion-button clear item-end>View</button>
+      </ion-item>
+    </div>
   </ion-list>
+
+</ion-content>

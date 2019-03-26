@@ -15,7 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MarcadorPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  partido: any = {};
+
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams) {
+      if (navParams.get('partido')) {
+        this.partido = navParams.get('partido');
+      } else {
+        console.log('no hay partido');
+      }
   }
 
   ionViewDidLoad() {

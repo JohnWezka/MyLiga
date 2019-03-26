@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color = "capota">
+  <ion-navbar color="capota">
     <ion-title>Elegir Liga</ion-title>
   </ion-navbar>
 
@@ -15,12 +15,13 @@
 
 <ion-content padding>
 
-  <ion-list *ngFor = "let liga of ligas">
-    <ion-item (click) = "irHome()">
+  <ion-list *ngFor="let liga of ligas | async">
+    <ion-item id = "click" (click) = "irHome(liga.userID)">
       <ion-avatar item-start>
         <img src="{{liga.foto}}">
       </ion-avatar>
       <h2>{{liga.nombreLiga}}</h2>
+      <p >{{liga.userID}}</p>
     </ion-item>
   </ion-list>
 

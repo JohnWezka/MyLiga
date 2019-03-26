@@ -13,18 +13,19 @@
     <ion-row>
       <ion-card-content col-4>
         <ion-avatar>
-          <img src="https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png">
-          <h1 text-center>12</h1>
+          <img src="{{partido.fotoLocal}}">
+          <h1 text-center>{{partido.nombreLocal}}</h1>
         </ion-avatar>
       </ion-card-content>
       <ion-col col-4>
-        <p text-center class="tiempo">C2<br>
-          11:33<p>
+        <p text-center class="tiempo">{{partido.fecha}}<br>
+          <br>
+          {{partido.hora}}</p>
       </ion-col>
       <ion-card-content col-4>
         <ion-avatar>
-          <img src="https://enebea.global.nba.com/media/img/teams/logos/CHI_logo.svg">
-          <h1 text-center>17</h1>
+          <img src="{{partido.fotoVisitante}}">
+          <h1 text-center>{{partido.nombreVisitante}}</h1>
         </ion-avatar>
       </ion-card-content>
     </ion-row>
