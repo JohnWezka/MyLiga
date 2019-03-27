@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RegistroLigaPage } from '../registro-liga/registro-liga';
 
 /**
  * Generated class for the RegistrarsePage page.
@@ -21,10 +20,6 @@ export class RegistrarsePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistrarsePage');
-  }
-
-  public irRegistroLiga(){
-    this.navCtrl.setRoot(RegistroLigaPage);
   }
 
 }

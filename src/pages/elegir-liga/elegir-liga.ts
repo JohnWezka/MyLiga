@@ -34,6 +34,14 @@ export class ElegirLigaPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
+      /*/this.ligaCollection = this.angularFirestore.collection()
+      this.ligasProvider.getLigas().subscribe((ligas) => {
+      //this.ligas = ligas;
+      //ligas.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+        this.ligas = ligas;
+      });
+    });*/
     this.ligaCollection = this.angularFirestore.collection('ligas');
     this.ligas = this.ligaCollection.valueChanges();
     /*this.ligasProvider.getLigas().subscribe((ligas) => {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { ElegirLigaPage } from '../elegir-liga/elegir-liga';
 
 /**
  * Generated class for the ConfiguracionPage page.
@@ -26,6 +27,10 @@ export class ConfiguracionPage {
 
   login() {
     this.navCtrl.push(LoginPage, { liga: this.liga });
+  }
+
+  elegirLiga(){
+    this.navCtrl.push(ElegirLigaPage);
   }
 
   ionViewDidLoad() {
