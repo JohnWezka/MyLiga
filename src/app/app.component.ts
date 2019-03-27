@@ -15,13 +15,20 @@ import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+
+
 import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
+
 import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
+
 import { EquiposAdminPage } from '../pages/equipos-admin/equipos-admin';
-import { RegistroMarcadorPage } from '../pages/registro-marcador/registro-marcador';
-import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equipos';
+import { TabsAdminPage } from '../pages/tabs-admin/tabs-admin';
+import { EquiposPage } from '../pages/equipos/equipos';
+import { MarcadorPage } from '../pages/marcador/marcador';
+import { FormularioMarcadorPage } from '../pages/formulario-marcador/formulario-marcador';
+import { FormularioMPage } from '../pages/formulario-m/formulario-m';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,10 +37,10 @@ import { RegistrarEquiposPage } from '../pages/registrar-equipos/registrar-equip
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = RegistroUsuariosPage;
-
+  rootPage:any = FormularioMarcadorPage;
+  
   pages: Array<{title: String, Component: any}>;
-      // Here you can do any higher level native things you might need.
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
