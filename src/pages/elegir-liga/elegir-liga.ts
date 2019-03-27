@@ -34,16 +34,14 @@ export class ElegirLigaPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
-<<<<<<< HEAD
-      //this.ligaCollection = this.angularFirestore.collection()
+      /*/this.ligaCollection = this.angularFirestore.collection()
       this.ligasProvider.getLigas().subscribe((ligas) => {
       //this.ligas = ligas;
-      /*/ligas.forEach((doc) => {
+      //ligas.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
         this.ligas = ligas;
-      });*/
-    });
-=======
+      });
+    });*/
     this.ligaCollection = this.angularFirestore.collection('ligas');
     this.ligas = this.ligaCollection.valueChanges();
     /*this.ligasProvider.getLigas().subscribe((ligas) => {
@@ -62,7 +60,6 @@ export class ElegirLigaPage {
       this.liga = navParams.get('seguir');
       console.log(this.liga);
     }
->>>>>>> 0d8ca5c97a7dde843cae2464cf38ac27c55d934d
   }
 
   ionViewDidLoad() {
