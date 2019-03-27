@@ -35,14 +35,10 @@ import { AngularFireDatabaseModule, AngularFireDatabase ,} from '@angular/fire/d
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { LigasProvider } from '../providers/ligas/ligas';
-<<<<<<< HEAD
 import { MarcadorProvider } from '../providers/marcador/marcador';
 import { FormularioMarcadorPage } from '../pages/formulario-marcador/formulario-marcador';
 import { FormularioMPage } from '../pages/formulario-m/formulario-m';
 
-=======
-import { JugadoresProvider } from '../providers/jugadores/jugadores';
->>>>>>> 0d8ca5c97a7dde843cae2464cf38ac27c55d934d
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDu92rdtAJ-mOjDF2IoMua6gM5S_1RaMMU",
@@ -51,7 +47,6 @@ export const firebaseConfig = {
     projectId: "myleague-a4d04",
     storageBucket: "myleague-a4d04.appspot.com",
     messagingSenderId: "468908962623"
-<<<<<<< HEAD
 
   //apiKey: "AIzaSyCrrASgB21Xwu1HKPkEMxyJRtSsrgGyr1g",
     //authDomain: "myleague-5a9c8.firebaseapp.com",
@@ -59,8 +54,6 @@ export const firebaseConfig = {
     //projectId: "myleague-5a9c8",
     //storageBucket: 'gs://myleague-5a9c8.appspot.com/',
     //messagingSenderId: "167455229801"
-=======
->>>>>>> 0d8ca5c97a7dde843cae2464cf38ac27c55d934d
 };
 
 
@@ -140,15 +133,9 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireDatabase,
     AngularFireDatabaseModule,
-<<<<<<< HEAD
     LigasProvider,
     MarcadorProvider,
     AngularFirestoreModule
-=======
-    AngularFirestoreModule,
-    LigasProvider,
-    JugadoresProvider
->>>>>>> 0d8ca5c97a7dde843cae2464cf38ac27c55d934d
   ]
 })
 export class AppModule {}
