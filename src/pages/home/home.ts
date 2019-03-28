@@ -15,7 +15,6 @@ interface Ligas {
   templateUrl: 'home.html'
 })
 export class HomePage {
-
   ligaCollection: AngularFirestoreCollection<Ligas>;
   ligas: Observable<Ligas[]>;
   idLiga: any;
@@ -28,5 +27,7 @@ export class HomePage {
     this.ligaCollection = this.angularFirestore.collection('ligas');
     this.ligas = this.ligaCollection.valueChanges();
   }
-
+  detallep() {
+    this.navCtrl.push("DetalleLigaPage");
+  }
 }

@@ -15,6 +15,7 @@ import { AdministradorPage} from '../pages/administrador/administrador';
 import { RegistroUsuariosPage } from '../pages/registro-usuarios/registro-usuarios';
 import { ElegirLigaPage } from '../pages/elegir-liga/elegir-liga';
 import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
+import { DetalleLigaPage } from '../pages/detalle-liga/detalle-liga';
 
 
 import { RegistroPartidosPage } from '../pages/registro-partidos/registro-partidos';
@@ -37,7 +38,7 @@ import { FormularioMPage } from '../pages/formulario-m/formulario-m';
 export class MyApp {
 @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = FormularioMarcadorPage;
+  rootPage:any = RegistroUsuariosPage;
   
   pages: Array<{title: String, Component: any}>;
 

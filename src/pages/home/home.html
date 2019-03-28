@@ -9,7 +9,7 @@
     <div padding>
         <h2>Estadisticas</h2>
     </div>
-    <ion-card *ngFor = "let liga of ligas | async">
+    <ion-card *ngFor = "let liga of ligas | async" (click)="detallep()">
         <div *ngIf = "liga.userID == idLiga">
             <img src="{{liga.foto}}" />
         <ion-card-content>
