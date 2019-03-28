@@ -23,6 +23,7 @@ import { JugadorInfoPage } from '../pages/jugador-info/jugador-info';
 import { TablaPartidosPage } from '../pages/tabla-partidos/tabla-partidos';
 import { TablaDePuntosPage } from '../pages/tabla-de-puntos/tabla-de-puntos';
 import { TabaPartidosAdminPage } from '../pages/taba-partidos-admin/taba-partidos-admin';
+import { DetalleLigaPage } from '../pages/detalle-liga/detalle-liga';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
@@ -35,6 +36,7 @@ import { MarcadorProvider } from '../providers/marcador/marcador';
 import { FormularioMarcadorPage } from '../pages/formulario-marcador/formulario-marcador';
 import { FormularioMPage } from '../pages/formulario-m/formulario-m';
 
+import { JugadoresProvider } from '../providers/jugadores/jugadores';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDu92rdtAJ-mOjDF2IoMua6gM5S_1RaMMU",
@@ -78,7 +80,8 @@ export const firebaseConfig = {
     TabaPartidosAdminPage,
     EquiposPage,
     FormularioMarcadorPage,
-    FormularioMPage
+    FormularioMPage,
+    DetalleLigaPage
   ],
   imports: [
     BrowserModule,
@@ -113,7 +116,8 @@ export const firebaseConfig = {
     TabaPartidosAdminPage,
     EquiposPage,
     FormularioMarcadorPage,
-    FormularioMPage
+    FormularioMPage,
+    DetalleLigaPage
     
 
   ],
@@ -125,7 +129,9 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     LigasProvider,
     MarcadorProvider,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    LigasProvider,
+    JugadoresProvider
   ]
 })
 export class AppModule {}
