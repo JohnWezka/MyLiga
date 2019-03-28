@@ -9,13 +9,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class DetalleLigaPage {
 
   liga: any = {};
-  liga2: any = {};
+  //liga2: any = {};
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams) {
-    this.liga = navParams.data;
-    this.liga2 = navParams.get('liga');
-    console.log(this.liga);
+    //---
+    if (navParams.get('liga')) {
+      this.liga = navParams.get('liga');
+      console.log(this.liga);
+    } else {
+      console.log("no jugador")
+    }
   }
 
   ionViewDidLoad() {
