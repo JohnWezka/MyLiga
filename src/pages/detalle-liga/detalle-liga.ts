@@ -1,15 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
-import { Observable } from 'rxjs';
 
-interface Ligas {
-  id: string;
-  nombreLiga: string;
-  nombreDueno: string;
-  descripcion: string;
-  foto: string;
-}
 @IonicPage()
 @Component({
   selector: 'page-detalle-liga',
@@ -17,15 +8,14 @@ interface Ligas {
 })
 export class DetalleLigaPage {
 
-  ligaCollection : AngularFirestoreCollection<Ligas>;
-  ligas : Observable<Ligas[]>;
-  idLiga:any;
+  liga: any = {};
+  liga2: any = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private angularFirestore: AngularFirestore) {
-    this.idLiga = navParams.data;
-    console.log(this.idLiga);
-    this.ligaCollection = this.angularFirestore.collection('ligas');
-    this.ligas = this.ligaCollection.valueChanges();
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams) {
+    this.liga = navParams.data;
+    this.liga2 = navParams.get('liga');
+    console.log(this.liga);
   }
 
   ionViewDidLoad() {

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { DetalleLigaPage } from '../detalle-liga/detalle-liga';
 
 interface Ligas {
   id: string;
@@ -27,7 +28,7 @@ export class HomePage {
     this.ligaCollection = this.angularFirestore.collection('ligas');
     this.ligas = this.ligaCollection.valueChanges();
   }
-  detallep() {
-    this.navCtrl.push("DetalleLigaPage");
+  detallep(liga) {
+    this.navCtrl.push(DetalleLigaPage, {liga: liga});
   }
 }

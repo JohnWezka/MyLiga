@@ -34,8 +34,6 @@ export class ElegirLigaPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
-<<<<<<< HEAD
-=======
       /*/this.ligaCollection = this.angularFirestore.collection()
       this.ligasProvider.getLigas().subscribe((ligas) => {
       //this.ligas = ligas;
@@ -44,7 +42,6 @@ export class ElegirLigaPage {
         this.ligas = ligas;
       });
     });*/
->>>>>>> 7aa0a93ff54d7aaebbcf28ef5b515cf2db57413d
     this.ligaCollection = this.angularFirestore.collection('ligas');
     this.ligas = this.ligaCollection.valueChanges();
     /*this.ligasProvider.getLigas().subscribe((ligas) => {
