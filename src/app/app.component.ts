@@ -27,6 +27,10 @@ import { EquiposPage } from '../pages/equipos/equipos';
 import { MarcadorPage } from '../pages/marcador/marcador';
 import { FormularioMarcadorPage } from '../pages/formulario-marcador/formulario-marcador';
 import { FormularioMPage } from '../pages/formulario-m/formulario-m';
+import { initializeApp } from 'firebase';
+
+import { timer } from 'rxjs/observable/timer';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -39,12 +43,15 @@ export class MyApp {
   
   pages: Array<{title: String, Component: any}>;
 
+  showSplash = true;
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      timer(3000).subscribe(()=>this.showSplash=false)
 
       this.pages=[{title: 'Home', Component: HomePage},
                   {title: 'Jugadores', Component: JugadoresPage},
@@ -52,7 +59,6 @@ export class MyApp {
                   {title: 'Registro de Torneos', Component: RegistroTorneoPage}];
     });
 
-    
   }
 
   
