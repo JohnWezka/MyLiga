@@ -11,9 +11,14 @@ interface Partidos {
   jornada: string;
   local: string;
   visitante: string;
+  nombreLocal: string;
+  nombreVisitante: string;
   lugar: string;
   categoria: string;
   idLiga: string;
+  fotoLocal: string;
+  fotoVisitante: string;
+
 }
 
 /**

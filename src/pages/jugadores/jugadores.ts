@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { JugadorInfoPage } from '../jugador-info/jugador-info';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { JugadoresProvider } from '../../providers/jugadores/jugadores';
 
 
 /**
@@ -36,13 +35,11 @@ export class JugadoresPage {
   jugadorCollection: AngularFirestoreCollection<Jugador>;
   jugadores: Observable<Jugador[]>
 
-  jugador: any = {};
   equipo: any = {};
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
-    private angularFirestore: AngularFirestore,
-    private jugadoresProvider: JugadoresProvider) {
+    private angularFirestore: AngularFirestore) {
     this.jugadorCollection = angularFirestore.collection('jugadores');
     this.jugadores = this.jugadorCollection.valueChanges();
     console.log(this.jugadores);

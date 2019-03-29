@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RegistroPartidosPage } from '../registro-partidos/registro-partidos';
 
 /**
  * Generated class for the TabaPartidosAdminPage page.
@@ -18,10 +17,6 @@ export class TabaPartidosAdminPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-  }
-  
-  registroPartido(){
-    this.navCtrl.push(RegistroPartidosPage);
   }
 
   ionViewDidLoad() {
