@@ -16,8 +16,9 @@ export class MarcadorProvider {
     return this.afDB.doc<any>('/Partido/'+id);
     
   }
-  public createMarcador(marcador){
+  public createMarcador(id){
     //return this.afDB.database.ref('/tablaMarcador'+marcador.id).set(marcador);
+    
   }
 
   public editMarcador(marcador){
