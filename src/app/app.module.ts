@@ -57,7 +57,6 @@ export const firebaseConfig = {
 };
 
 
-
 @NgModule({
   declarations: [
     MyApp,

@@ -36,11 +36,11 @@
   <ion-list>
       
 
-    <ion-row *ngFor="let Partido of partidos"  (click)=irAFormulario(Partido)  style="background-color: #efefef; margin: 7px;border-radius: 20px">
+    <ion-row *ngFor="let Partido of partidos"  (click)=irAFormulario(Partbido)  style="background-color: #efefef; margin: 7px;border-radius: 20px">
         <ion-card-content col-4>
           <ion-avatar>
-            <img src="{{Partido.fotoLocal}}">
-            <h1 text-center>{{Partido.nombreLocal}}</h1>
+            <img src="{{Partido.fotoLocal}}" style="min-width: 89px; max-width: 89px; min-height: 90px; max-height: 90px;margin-left: 10px; margin-top: 7px;">
+            <h4 text-center>{{Partido.nombreLocal}}</h4>
           </ion-avatar>
         </ion-card-content>
 
@@ -51,8 +51,8 @@
 
         <ion-card-content col-4>
           <ion-avatar>
-            <img src="{{Partido.fotoVisitante}}">
-            <h1 text-center>{{Partido.nombreVisitante}}</h1>
+            <img src="{{Partido.fotoVisitante}}" style="min-width: 89px; max-width: 89px; min-height: 90px; max-height: 90px; margin-right: 10px; margin-top: 7px;">
+            <h4 text-center>{{Partido.nombreVisitante}}</h4>
           </ion-avatar>
         </ion-card-content>
       </ion-row>
