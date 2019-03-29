@@ -64,18 +64,45 @@
             <ion-row>
               <ion-card-content col-4>
                 <ion-avatar>
-                  <img src="{{partido.fotoLocal}}">
-                  <h1 class="local">{{partido.local}}</h1>
+                  <img src="{{partido.fotoLocal}}" width="100%" height="115">
+                  <h2 class="local">{{partido.nombreLocal}}</h2>
                 </ion-avatar>
               </ion-card-content>
-              <ion-col col-4>
-                <p text-center class="tiempo">{{partido.fecha}}<br>
-                  {{partido.hora}}<p>
+              <ion-col col-4 class="tiempo">
+                <h2 text-center>{{partido.fecha}}</h2>
+                <h3 text-center>{{partido.hora}}</h3>
               </ion-col>
               <ion-card-content col-4>
                 <ion-avatar>
-                  <img src="{{partido.fotoVisitante}}">
-                  <h1 class="visitante">{{partido.visitante}}</h1>
+                  <img src="{{partido.fotoVisitante}}" width="100%" height="115">
+                  <h2 class="visitante">{{partido.nombreVisitante}}</h2>
+                </ion-avatar>
+              </ion-card-content>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Libre'">
+      <ion-card class="marcador" *ngFor="let partido of partidos | async">
+        <div (click)=" irMarcador(partido)" *ngIf="partido.idLiga == liga && partido.categoria == 'Libre'">
+          <ion-grid>
+            <ion-row>
+              <ion-card-content col-4>
+                <ion-avatar>
+                  <img src="{{partido.fotoLocal}}" width="100%" height="115">
+                  <h2 class="local">{{partido.nombreLocal}}</h2>
+                </ion-avatar>
+              </ion-card-content>
+              <ion-col col-4 class="tiempo">
+                <h2 text-center>{{partido.fecha}}</h2>
+                <h3 text-center>{{partido.hora}}</h3>
+              </ion-col>
+              <ion-card-content col-4>
+                <ion-avatar>
+                  <img src="{{partido.fotoVisitante}}" width="100%" height="115">
+                  <h2 class="visitante">{{partido.nombreVisitante}}</h2>
                 </ion-avatar>
               </ion-card-content>
             </ion-row>
