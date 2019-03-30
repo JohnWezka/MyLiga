@@ -17,19 +17,24 @@ import { MarcadorProvider } from '../../providers/marcador/marcador';
 export class FormularioMPage {
   partido: any = {};
   constructor(public navCtrl: NavController,
-     public navParams: NavParams,
-     public marcadorProvider:MarcadorProvider) {
-      
-    const idPartido=navParams.get('Partido');
-    console.log(idPartido);
-    
-    this.marcadorProvider.getPArtido(idPartido)
-    .valueChanges().subscribe(partido =>{
-      this.partido=partido;
-      
-    });
+    public navParams: NavParams,
+    public marcadorProvider: MarcadorProvider) {
 
+    const idPartido = navParams.get('Partido');
+    //Mandamos id para crear el JSON
+    this.createJsonMarcador(idPartido);
+    //Recibimos id para poder buscar un partido en especifico
+    this.marcadorProvider.getPArtido(idPartido)
+      .valueChanges().subscribe(partido => {
+        this.partido = partido;
+      });
+      
   }
+
+  public createJsonMarcador(id) {
+    this.marcadorProvider.createMarcador(id);
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FormularioMPage');
