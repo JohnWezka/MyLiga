@@ -28,12 +28,18 @@ export class TabPage {
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams) {
-    this.idLiga = this.navParams.get('idLiga');
-    console.log(this.idLiga);
+    this.idLiga = navParams.get('idLiga');
+    console.log("menu "+this.idLiga);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabPage');
   }
 
+  ionViewDidEnter(){
+ 
+    this.idLiga = this.navParams.data.idLiga;
+    console.log(this.idLiga);
+  }
+  
 }

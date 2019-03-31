@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { AlertController } from 'ionic-angular';
 import { ElegirLigaPage } from '../elegir-liga/elegir-liga';
 
 /**
@@ -20,7 +21,8 @@ export class ConfiguracionPage {
   liga: any;
 
   constructor(public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    public alertCtrl: AlertController) {
     this.liga = navParams.data;
     console.log(this.liga);
   }
@@ -29,8 +31,14 @@ export class ConfiguracionPage {
     this.navCtrl.push(LoginPage, { liga: this.liga });
   }
 
-  elegirLiga(){
-    this.navCtrl.push(ElegirLigaPage);
+  elegirLiga() {
+    //this.navCtrl.setRoot(ElegirLigaPage);
+    const alert = this.alertCtrl.create({
+      title: '¡Aviso!',
+      subTitle: 'Esta sección aun no se encuentra disponible',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
