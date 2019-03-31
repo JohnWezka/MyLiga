@@ -44,7 +44,7 @@ export class HomePage {
     this.marcadorProvider.getJugadores().valueChanges().subscribe((jugador) => {
       this.jugadores = jugador;
 
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < this.jugadores.length; i++) {
         this.jugadores1[i] = this.jugadores[i];
       }
     })
@@ -54,7 +54,7 @@ export class HomePage {
     this.marcadorProvider.getEquipos().valueChanges().subscribe((equipo) => {
       this.equipos = equipo;
 
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < this.equipos.length; i++) {
         this.equipos1[i] = this.equipos[i];
       }
     })
@@ -63,7 +63,6 @@ export class HomePage {
 
 
     this.idLiga = navParams.data;
-    console.log("id liga " + this.idLiga);
     this.ligaCollection = this.angularFirestore.collection('ligas');
     this.ligas = this.ligaCollection.valueChanges();
   }

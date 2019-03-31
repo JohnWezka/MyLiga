@@ -6,9 +6,7 @@
 </ion-header>
 
 <ion-content padding class="ion-content">
-    <div padding>
-        <h2>Estadisticas</h2>
-    </div>
+
     <ion-card *ngFor="let liga of ligas | async">
         <div *ngIf="liga.userID == idLiga" (click)="detallep(liga)">
             <img src="{{liga.foto}}" />
@@ -29,14 +27,16 @@
         </div>
 
         <ion-list>
-            <ion-item *ngFor=" let jugador of jugadores1;  let i=index">
-                <ion-thumbnail item-start>
-                    <img src={{jugador.foto}}>
-                </ion-thumbnail>
-                <h2>{{jugador.nombre}}</h2>
-                <p>{{jugador.apellidoP}}</p>
-                <button ion-button clear item-end (click)=detalleJugador(jugador) >View</button>
-            </ion-item>
+            <div *ngFor=" let jugador of jugadores1;  let i=index">
+                <ion-item *ngIf="jugador.idLiga == idLiga && i < 6">
+                    <ion-thumbnail item-start>
+                        <img src={{jugador.foto}}>
+                    </ion-thumbnail>
+                    <h2>{{jugador.nombre}}</h2>
+                    <p>{{jugador.apellidoP}}</p>
+                    <button ion-button clear item-end (click)="detalleJugador(jugador)" color="morado">View</button>
+                </ion-item>
+            </div>
 
         </ion-list>
     </div>
@@ -45,15 +45,16 @@
             <h2>Top 5 Equipos</h2>
         </div>
         <ion-list>
-            <ion-item *ngFor=" let equipo of equipos1;  let i=index">
+            <div *ngFor=" let equipo of equipos1;  let i=index">
+            <ion-item *ngIf = "equipo.idLiga == idLiga && i < 6">
                 <ion-thumbnail item-start>
                     <img src={{equipo.foto}}>
                 </ion-thumbnail>
                 <h2>{{equipo.nombreEquipo}}</h2>
                 <p>{{equipo.nombreCategoria}}</p>
-                <button ion-button clear item-end (click)=detalleEquipo(equipo)>View</button>
+                <button ion-button clear item-end (click)="detalleEquipo(equipo)" color = "morado">View</button>
             </ion-item>
-            
+        </div>
         </ion-list>
     </div>
 </ion-content>

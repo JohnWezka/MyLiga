@@ -7,31 +7,45 @@
 </ion-header>
 
 
-<ion-content padding>
-<!--
+<ion-content padding class="content">
+  <!--
 
   
 -->
-  <ion-grid class="marcador">
-    <ion-row>
-      <ion-card-content col-4>
-        <ion-avatar>
-          <img src="{{Equipo.fotoLocal}}" style="max-width: 100px;min-width: 100px; max-height: 70px;min-height: 70px">
-          <h4 text-center>{{Equipo.nombreLocal}}</h4>
-        </ion-avatar>
-      </ion-card-content>
-      <ion-col col-4>
-        <p text-center class="tiempo">{{Equipo.fecha}}<br>
-          <br>
-          {{Equipo.hora}}</p>
-      </ion-col>
-      <ion-card-content col-4>
-        <ion-avatar>
-          <img src="{{Equipo.fotoVisitante}}">
-          <h4 text-center>{{Equipo.nombreVisitante}}</h4>
-        </ion-avatar>
-      </ion-card-content>
-    </ion-row>
+  <ion-card>
+    <ion-grid class="marcador">
+      <ion-row>
+        <ion-col col-4>
+          <ion-avatar>
+            <img src="{{Equipo.fotoLocal}}" width="100%" height="115">
+            <h4 text-center>{{Equipo.nombreLocal}}</h4>
+          </ion-avatar>
+        </ion-col>
+        <ion-col col-4>
+          <p text-center class="tiempo">{{Equipo.fecha}}<br>
+            <br>
+            {{Equipo.hora}}</p>
+        </ion-col>
+        <ion-col col-4>
+          <ion-avatar>
+            <img src="{{Equipo.fotoVisitante}}" width="100%" height="115">
+            <h4 text-center>{{Equipo.nombreVisitante}}</h4>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <div padding>
+    <h5>
+      Lugar: {{Equipo.lugar}}
+    </h5>
+    <p>
+      Jornada: {{Equipo.jornada}}
+    </p>
+  </div>
+
+  <div class="white">
 
     <div padding>
       <ion-segment [(ngModel)]="Tabla">
@@ -47,85 +61,83 @@
       </ion-segment>
     </div>
 
-  </ion-grid>
 
 
+    <div [ngSwitch]="Tabla">
+      <table class="estadisticas" *ngSwitchCase="'Enfrentamiento'">
+        <tr>
+          <th>{{Equipo.nombreLocal}}</th>
+          <th></th>
+          <th>{{Equipo.nombreVisitante}}</th>
+        </tr>
+        <tr>
+          <td>68%</td>
+          <td text-center>TC%</td>
+          <td class="derecha">34%</td>
+        </tr>
+        <tr>
+          <td>57%</td>
+          <td text-center>3P%</td>
+          <td class="derecha">100%</td>
+        </tr>
+        <tr>
+          <td>87.5%</td>
+          <td text-center>TL%</td>
+          <td class="derecha">100%</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td text-center>Asistencias</td>
+          <td text-right>10</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td text-center>Rebotes totales</td>
+          <td text-right>9</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td text-center>Rebotes ofensivos</td>
+          <td class="derecha">2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td text-center>Rebotes defensivos</td>
+          <td class="derecha">2</td>
+        </tr>
+        <tr>
+          <td class="izquierda">3</td>
+          <td text-center>Robos</td>
+          <td class="derecha">2</td>
+        </tr>
+        <tr>
+          <td class="izquierda">3</td>
+          <td text-center>Tapones</td>
+          <td class="derecha">2</td>
+        </tr>
+        <tr>
+          <td class="izquierda">3</td>
+          <td text-center>Tapones en contra</td>
+          <td class="derecha">2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td text-center>Perdidas</td>
+          <td class="derecha">2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td text-center>Puntos tras recuperacion</td>
+          <td class="derecha">2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td text-center>Faltas</td>
+          <td class="derecha">2</td>
+        </tr>
+      </table>
 
-  <div [ngSwitch]="Tabla">
-    <table class="estadisticas" *ngSwitchCase="'Enfrentamiento'">
-      <tr>
-        <th>{{Equipo.nombreLocal}}</th>
-        <th></th>
-        <th>{{Equipo.nombreVisitante}}</th>
-      </tr>
-      <tr>
-        <td>68%</td>
-        <td text-center>TC%</td>
-        <td class="derecha">34%</td>
-      </tr>
-      <tr>
-        <td>57%</td>
-        <td text-center>3P%</td>
-        <td class="derecha">100%</td>
-      </tr>
-      <tr>
-        <td>87.5%</td>
-        <td text-center>TL%</td>
-        <td class="derecha">100%</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td text-center>Asistencias</td>
-        <td text-right>10</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td text-center>Rebotes totales</td>
-        <td text-right>9</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td text-center>Rebotes ofensivos</td>
-        <td class="derecha">2</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td text-center>Rebotes defensivos</td>
-        <td class="derecha">2</td>
-      </tr>
-      <tr>
-        <td class="izquierda">3</td>
-        <td text-center>Robos</td>
-        <td class="derecha">2</td>
-      </tr>
-      <tr>
-        <td class="izquierda">3</td>
-        <td text-center>Tapones</td>
-        <td class="derecha">2</td>
-      </tr>
-      <tr>
-        <td class="izquierda">3</td>
-        <td text-center>Tapones en contra</td>
-        <td class="derecha">2</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td text-center>Perdidas</td>
-        <td class="derecha">2</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td text-center>Puntos tras recuperacion</td>
-        <td class="derecha">2</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td text-center>Faltas</td>
-        <td class="derecha">2</td>
-      </tr>
-    </table>
-
-    <table class="estadisticas" *ngSwitchCase="'Estadisticas'">
+      <table class="estadisticas" *ngSwitchCase="'Estadisticas'">
         <tr>
           <th>Equipo1</th>
           <th></th>
@@ -152,6 +164,7 @@
           <td text-right>10</td>
         </tr>
       </table>
+    </div>
   </div>
 
 

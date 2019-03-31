@@ -1,8 +1,13 @@
 page-marcador {
 
+    .content{
+        background-color: #efefef;
+    }
+
     .tiempo{
         padding-top: 50%;
     }
+
     .estadisticas{
 
         width: 100%;
@@ -10,5 +15,9 @@ page-marcador {
         .derecha{
             text-align: right;
         }
+    }
+
+    .white{
+        background-color: white;
     }
 }

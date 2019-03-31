@@ -28,7 +28,13 @@ export class ConfiguracionPage {
   }
 
   login() {
-    this.navCtrl.push(LoginPage, { liga: this.liga });
+    //this.navCtrl.push(LoginPage, { liga: this.liga });
+    const alert = this.alertCtrl.create({
+      title: '¡Aviso!',
+      subTitle: 'Esta sección aun no se encuentra disponible',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   elegirLiga() {
