@@ -18,32 +18,34 @@ import { MarcadorProvider } from '../../providers/marcador/marcador';
 export class EquipoPrincipalPage {
 
   equipo: any = {};
-  Equipo:any={};
-  constructor(public navCtrl: NavController, 
+  Equipo: any = {};
+  constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public marcadorProvider: MarcadorProvider) {
-      //JW -->
+    //JW -->
     const idEquipo = navParams.get('equipo');
     //Recibimos id para poder buscar un equipo en especifico
     this.marcadorProvider.getEquipo(idEquipo)
       .valueChanges().subscribe(equipo => {
         this.Equipo = equipo;
-       
+
       });
     //JW<--
 
 
 
-      /*if (navParams.get('equipo')) {
-        this.equipo = navParams.get('equipo');
-        console.log(this.equipo);
-      } else {
-        console.log("no jugador")
-      }*/
+    /*if (navParams.get('equipo')) {
+      this.equipo = navParams.get('equipo');
+      console.log(this.equipo);
+    } else {
+      console.log("no jugador")
+    }*/
   }
 
-  public toJugadores(){
-    this.navCtrl.push(JugadoresPage, {equipo: this.equipo});
+  public toJugadores() {
+    this.navCtrl.push(JugadoresPage, { equipo: this.Equipo.idEquipo});
+    console.log("Equipo principal XX "+this.Equipo.idEquipo);
+    
   }
 
   ionViewDidLoad() {

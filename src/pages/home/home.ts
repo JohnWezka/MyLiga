@@ -77,7 +77,7 @@ export class HomePage {
   
   detalleEquipo(equipo){
     this.navCtrl.push(EquipoPrincipalPage, { equipo: equipo.idEquipo });
-    console.log("id equipo-P ->>"+equipo.idEquipo);
+    console.log("id equipo-Home ->>"+equipo.idEquipo);
   }
 
   detallep(liga) {
