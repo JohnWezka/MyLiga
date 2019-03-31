@@ -17,21 +17,18 @@
       <ion-icon name="man"></ion-icon>
     </button>
   </ion-fab>
-  <ion-card>
-    <img src="{{equipo.foto}}" width="100%" height="150">
+  <ion-card style="max-width: 200px;min-width: 200; align-items: center;">
+    <img src="{{Equipo.foto}}" style="min-width: 89px; max-width: 89px; min-height: 90px; max-height: 90px;margin-left: 10px; margin-top: 7px;">
   </ion-card>
   <ion-list>
     <ion-item>
-      {{equipo.nombreEquipo}}
+      {{Equipo.nombreEquipo}}
     </ion-item>
     <ion-item>
-      {{equipo.nombreEntrenador}}
+      {{Equipo.nombreEntrenador}}
     </ion-item>
     <ion-item>
-      {{equipo.nombreAsistente}}
-    </ion-item>
-    <ion-item>
-      {{equipo.nombreEquipo}}
+      {{Equipo.nombreAsistente}}
     </ion-item>
     <ion-item>
       <ion-icon name="podium" item-start></ion-icon>

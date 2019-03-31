@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { JugadoresPage } from '../jugadores/jugadores';
+import { MarcadorProvider } from '../../providers/marcador/marcador';
 
 /**
  * Generated class for the EquipoPrincipalPage page.
@@ -17,15 +18,28 @@ import { JugadoresPage } from '../jugadores/jugadores';
 export class EquipoPrincipalPage {
 
   equipo: any = {};
-
+  Equipo:any={};
   constructor(public navCtrl: NavController, 
-    public navParams: NavParams) {
-      if (navParams.get('equipo')) {
+    public navParams: NavParams,
+    public marcadorProvider: MarcadorProvider) {
+      //JW -->
+    const idEquipo = navParams.get('equipo');
+    //Recibimos id para poder buscar un equipo en especifico
+    this.marcadorProvider.getEquipo(idEquipo)
+      .valueChanges().subscribe(equipo => {
+        this.Equipo = equipo;
+       
+      });
+    //JW<--
+
+
+
+      /*if (navParams.get('equipo')) {
         this.equipo = navParams.get('equipo');
         console.log(this.equipo);
       } else {
         console.log("no jugador")
-      }
+      }*/
   }
 
   public toJugadores(){

@@ -11,24 +11,23 @@
 
 </ion-header>
 
-<ion-content padding class="ion-content">
-  <ion-card>
-    <img
-      src="{{jugador.foto}}" height="150">
+<ion-content padding class="ion-content" style="padding-right: 20%">
+  <ion-card style=" border-radius: 50%;max-width: 200px;min-width: 200; align-items: center;">
+    <img src="{{Jugador.foto}}" style="max-width: 200px; min-width: 200px; min-height: 190px;max-height: 190px; border-radius: 50%;">
   </ion-card>
   <ion-list>
     <ion-item>
-      {{jugador.nombre}}
+      {{Jugador.nombre}}
     </ion-item>
     <ion-item>
       <ion-icon name = "md-calendar" item-start></ion-icon>
       <h2>Edad</h2>
-      <ion-note item-end>{{age}}</ion-note>
+      <ion-note item-end>{{Jugador.fechaNacimiento}}</ion-note>
     </ion-item>
     <ion-item>
       <ion-icon name = "ios-grid-outline" item-start></ion-icon>
       Numero
-      <ion-note item-end>{{jugador.numero}}</ion-note>
+      <ion-note item-end>{{Jugador.numero}}</ion-note>
     </ion-item>
     <ion-item>
       <ion-icon name = "md-basketball" item-start></ion-icon>

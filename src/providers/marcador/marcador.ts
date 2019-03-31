@@ -19,11 +19,32 @@ export class MarcadorProvider {
 
   }
 
+  public getJugadores() {
+    return this.afDB.collection<any>('jugadores');
+    
+  }
+
+  public getJugador(id) {
+    return this.afDB.doc<any>('/jugadores/' + id);
+
+  }
+
+  public getEquipos() {
+    return this.afDB.collection<any>('equipos');
+    
+  }
+
+  public getEquipo(id) {
+    return this.afDB.doc<any>('/equipos/' + id);
+
+  }
+
+
   equipolocal: any = {};
   equipovisitante: any = {};
-  
 
-  public createMarcador(id) {
+
+  public createMarcador(id) {/*
     this.getPArtido(id).valueChanges().subscribe(partido => {
       this.idp = partido;
       this.equipolocal = partido.local;
@@ -32,14 +53,25 @@ export class MarcadorProvider {
       console.log("local->" + this.equipolocal);
       console.log("visit->" + this.equipovisitante);
     });
-    var washingtonRef = this.afDB.collection("Partido").doc(id);
+    var frankDocRef = this.afDB.collection("Partido").doc(id);
 
-    washingtonRef.update({
-      local:this.equipolocal.add
-      
-    })
+    frankDocRef.update({
+      visitante: {
+        asistencia: "",
+        rebotesOfensivos: "",
+        rebotesDefensivos: "",
+        robos: "",
+        tapones: "",
+        perdidas: "",
+        puntos: "",
+        faltas: ""
+      }
 
+    }).then(function () {
+      console.log("Document successfully updated!");
+    });
 
+*/
 
 
 
