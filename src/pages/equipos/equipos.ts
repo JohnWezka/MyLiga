@@ -37,17 +37,16 @@ export class EquiposPage {
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
     this.liga = navParams.data;
-    console.log("esta "+this.liga);
     this.equipoCollection = angularFirestore.collection('equipos');
     this.equipos = this.equipoCollection.valueChanges();
   }
 
   public toEquipo(equipo) {
     console.log(equipo);
-    this.navCtrl.push(EquipoPrincipalPage, {equipo: equipo});
+    this.navCtrl.push(EquipoPrincipalPage, {equipo: equipo.idEquipo});
   }
 
-  ionViewCanEnter(){
+  /*ionViewCanEnter(){
  
  
   }
@@ -61,5 +60,5 @@ export class EquiposPage {
   ionViewWillEnter(){
  
     console.log("evento");
-  }
+  }*/
 }

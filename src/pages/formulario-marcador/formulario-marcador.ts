@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import{FormularioMPage} from '../formulario-m/formulario-m'
-import {MarcadorProvider} from '../../providers/marcador/marcador'
+import { FormularioMPage } from '../formulario-m/formulario-m'
+import { MarcadorProvider } from '../../providers/marcador/marcador'
 /**
  * Generated class for the FormularioMarcadorPage page.
  *
@@ -16,20 +16,22 @@ import {MarcadorProvider} from '../../providers/marcador/marcador'
 })
 export class FormularioMarcadorPage {
 
-  partidos : any =[];
+  partidos: any = [];
   Partido = null;
 
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams,
-     public marcadorProvider:MarcadorProvider) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public marcadorProvider: MarcadorProvider) {
 
-       this.marcadorProvider.getPartidos().valueChanges().subscribe((Partido)=>{
-         this.partidos=Partido;
-         console.log(Partido);
-                 
-         
-       })
+    this.marcadorProvider.getPartidos().valueChanges().subscribe((Partido) => {
+      this.partidos = Partido;
+      console.log(Partido);
+    })
+  }
+
+  public addMarcador() {
+
   }
 
   ionViewDidLoad() {
@@ -45,9 +47,7 @@ export class FormularioMarcadorPage {
   }*/
 
   irAFormulario(partido) {
-    this.navCtrl.push(FormularioMPage, {Partido: partido.id });
-    
-    
+    this.navCtrl.push(FormularioMPage, { Partido: partido.id });
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, DateTime } from 'ionic-angular';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
+import { MarcadorProvider } from '../../providers/marcador/marcador';
 
 /**
  * Generated class for the JugadorInfoPage page.
@@ -17,15 +18,27 @@ import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/fires
 export class JugadorInfoPage {
 
   jugador: any = {};
-
   age: any;
-
   fecha: any = new Date;
+
+  Jugador: any = {};
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    private angularFirestore: AngularFirestore) {
-    if (navParams.get('jugador')) {
+    private angularFirestore: AngularFirestore,
+    public marcadorProvider: MarcadorProvider) {
+    //JW -->
+    const idJugador = navParams.get('jugador');
+    //Recibimos id para poder buscar un partido en especifico
+    this.marcadorProvider.getJugador(idJugador)
+      .valueChanges().subscribe(jugador => {
+        this.Jugador = jugador;
+        //Calcular la fecha de nacimiento del jugador
+        this.Jugador.fechaNacimiento = this.fecha.getFullYear() - parseInt(this.Jugador.fechaNacimiento.substring(0, 4));
+      });
+    //JW<--
+
+    /*if (navParams.get('jugador')) {
       this.jugador = navParams.get('jugador');
       console.log(this.jugador);
     } else {
@@ -33,7 +46,7 @@ export class JugadorInfoPage {
     }
     this.edad();
     console.log(this.fecha.getFullYear());
-    console.log(this.jugador.fechaNacimiento.substring(0, 4));
+    console.log(this.jugador.fechaNacimiento.substring(0, 4));*/
   }
 
   ionViewDidLoad() {

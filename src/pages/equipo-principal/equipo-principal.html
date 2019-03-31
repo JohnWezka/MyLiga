@@ -18,17 +18,20 @@
     </button>
   </ion-fab>
   <ion-card>
-    <img src="{{equipo.foto}}" width="100%" height="150">
+    <img src="{{Equipo.foto}}"
+      style="min-width: 300px; max-width: 300px; min-height: 200px; max-height: 200px;margin-left: 15px; margin-right: 15px;margin-top: 15px; margin-bottom: 15px;">
   </ion-card>
   <ion-list>
-    <ion-item>
-      {{equipo.nombreEquipo}}
+    <ion-item text-center>
+      {{Equipo.nombreEquipo}}
     </ion-item>
     <ion-item>
-      Entrenador: {{equipo.nombreEntrenador}}
+      <ion-icon name="ios-person" item-start></ion-icon>
+      Entrenador: {{Equipo.nombreEntrenador}}
     </ion-item>
     <ion-item>
-      Asistente: {{equipo.nombreAsistente}}
+      <ion-icon name="ios-clipboard" item-start></ion-icon>
+      Asistente: {{Equipo.nombreAsistente}}
     </ion-item>
     <ion-item>
       <ion-icon name="podium" item-start></ion-icon>
@@ -41,12 +44,12 @@
       <ion-note item-end>10</ion-note>
     </ion-item>
     <ion-item>
-      <ion-icon name="medal" item-start></ion-icon>
+      <ion-icon name="ios-ribbon" item-start></ion-icon>
       Partidos Ganados
       <ion-note item-end>3</ion-note>
     </ion-item>
     <ion-item>
-      <ion-icon name="sad" item-start></ion-icon>
+      <ion-icon name="ios-thumbs-down" item-start></ion-icon>
       Partidos Perdidos
       <ion-note item-end>7</ion-note>
     </ion-item>

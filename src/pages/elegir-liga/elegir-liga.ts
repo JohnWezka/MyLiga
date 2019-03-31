@@ -61,6 +61,7 @@ export class ElegirLigaPage {
       console.log(this.liga);
     }
   }
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ElegirLigaPage');

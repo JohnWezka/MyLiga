@@ -44,7 +44,7 @@ export class TablaPartidosPage {
     public navParams: NavParams,
     private angularFirestore: AngularFirestore) {
     this.liga = navParams.data;
-    console.log(this.liga);
+    console.log("id- Kevin-<< "+this.liga);
     this.partidoCollection = this.angularFirestore.collection('Partido');
     this.partidos = this.partidoCollection.valueChanges();
   }
@@ -54,7 +54,9 @@ export class TablaPartidosPage {
   }
 
   public irMarcador(partido) {
-    this.navCtrl.push(MarcadorPage, {partido: partido});
+    this.navCtrl.push(MarcadorPage, {partido: partido.id});
+    console.log("navCtl id "+ partido.id);
+    
   }
 
 }

@@ -17,7 +17,7 @@
 
   <ion-list>
     <div *ngFor="let jugador of jugadores | async">
-      <ion-item *ngIf="jugador.equipo == equipo.idEquipo" (click)="jugadorInfo(jugador)">
+      <ion-item *ngIf="jugador.equipo == equipo" (click)="jugadorInfo(jugador)">
         <ion-thumbnail item-start>
           <img src={{jugador.foto}}>
         </ion-thumbnail>
@@ -26,5 +26,17 @@
       </ion-item>
     </div>
   </ion-list>
+
+  <!--<ion-list>
+    <ion-item *ngFor=" let team of Teams;  let i=index"></ion-item>
+    <ion-item *ngFor="let team of Teams">
+      <ion-thumbnail item-start>
+        <img src={{Teams.foto}}>
+      </ion-thumbnail>
+      <h2>{{Teams.nombre}}</h2>
+      <p>{{Teams.numero}}</p>
+      <button ion-button clear item-end (click)="detalleJugador(Teams)">View</button>
+    </ion-item>
+  </ion-list>-->
 
 </ion-content>
