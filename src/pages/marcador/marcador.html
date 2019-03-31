@@ -8,24 +8,27 @@
 
 
 <ion-content padding>
+<!--
 
+  
+-->
   <ion-grid class="marcador">
     <ion-row>
       <ion-card-content col-4>
         <ion-avatar>
-          <img src="{{partido.fotoLocal}}">
-          <h1 text-center>{{partido.nombreLocal}}</h1>
+          <img src="{{Equipo.fotoLocal}}" style="max-width: 100px;min-width: 100px; max-height: 70px;min-height: 70px">
+          <h4 text-center>{{Equipo.nombreLocal}}</h4>
         </ion-avatar>
       </ion-card-content>
       <ion-col col-4>
-        <p text-center class="tiempo">{{partido.fecha}}<br>
+        <p text-center class="tiempo">{{Equipo.fecha}}<br>
           <br>
-          {{partido.hora}}</p>
+          {{Equipo.hora}}</p>
       </ion-col>
       <ion-card-content col-4>
         <ion-avatar>
-          <img src="{{partido.fotoVisitante}}">
-          <h1 text-center>{{partido.nombreVisitante}}</h1>
+          <img src="{{Equipo.fotoVisitante}}">
+          <h4 text-center>{{Equipo.nombreVisitante}}</h4>
         </ion-avatar>
       </ion-card-content>
     </ion-row>
@@ -51,9 +54,9 @@
   <div [ngSwitch]="Tabla">
     <table class="estadisticas" *ngSwitchCase="'Enfrentamiento'">
       <tr>
-        <th>Equipo1</th>
+        <th>{{Equipo.nombreLocal}}</th>
         <th></th>
-        <th>Equipo2</th>
+        <th>{{Equipo.nombreVisitante}}</th>
       </tr>
       <tr>
         <td>68%</td>

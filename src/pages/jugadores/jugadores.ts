@@ -68,7 +68,7 @@ export class JugadoresPage {
         //Filtrar a los jugadores
         if (this.jugador.equipo==this.id) {
           //this.Teams[i]=this.jugador;
-          this.Teams[i]=this.jugador[i];
+          this.Teams[i]=this.jugador;
           
         }
       }

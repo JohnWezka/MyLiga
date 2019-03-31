@@ -19,15 +19,29 @@ export class MarcadorPage {
   partidos: any = {};
   partido: any = {};
 
+  Equipo: any = {};
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public marcadorProvider: MarcadorProvider) {
-    if (navParams.get('partido')) {
+       //JW -->
+    const idPartido = navParams.get('partido');
+    console.log("Id recivido nvctrl ZZZ"+idPartido);
+
+    //Recibimos id para poder buscar un equipo en especifico
+    this.marcadorProvider.getPArtido(idPartido)
+      .valueChanges().subscribe(equipo => {
+        this.Equipo = equipo;
+
+      });
+
+
+    //JW<--
+    /*if (navParams.get('partido')) {
       this.partido = navParams.get('partido');
     this.marcadorProvider.createMarcador(this.partido.id);
     } else {
       console.log('no hay partido');
-    }
+    }*/
   }
 
   ionViewDidLoad() {

@@ -44,7 +44,7 @@ export class EquiposPage {
 
   public toEquipo(equipo) {
     console.log(equipo);
-    this.navCtrl.push(EquipoPrincipalPage, {equipo: equipo});
+    this.navCtrl.push(EquipoPrincipalPage, {equipo: equipo.idEquipo});
   }
 
   ionViewDidLoad() {
