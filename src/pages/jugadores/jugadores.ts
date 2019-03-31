@@ -45,7 +45,7 @@ export class JugadoresPage {
 
   id = null;
 
-  Teams: any = [];
+  Teams: any = {};
   tp:any=[];
   team: any={};
 
@@ -68,7 +68,7 @@ export class JugadoresPage {
         //Filtrar a los jugadores
         if (this.jugador.equipo==this.id) {
           //this.Teams[i]=this.jugador;
-          this.Teams[i]=this.jugador;
+          this.Teams=this.jugador;
           
         }
       }
@@ -89,6 +89,11 @@ export class JugadoresPage {
 
   public toInfo() {
     this.navCtrl.push(JugadorInfoPage);
+  }
+
+  detalleJugador(jugador){
+    this.navCtrl.push(JugadorInfoPage, { jugador: jugador.id });
+    console.log("id jugador-p ->>"+jugador.id);
   }
 
   ionViewDidLoad() {
